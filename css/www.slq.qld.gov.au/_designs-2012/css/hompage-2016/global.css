@@ -1,0 +1,3779 @@
+/*
+  Running Squiz Matrix
+  Developed by Squiz - http://www.squiz.net
+  Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 14 April 2018 08:53:07
+*/
+
+
+/**
+ * SLQ - Internet Site
+ *
+ * global.css
+ * author: Squiz Brisbane - TNT
+ * Revisions: SAS 2013/06/14 - SAS 2013/08/26 - TiT 2013/09/02 - SAS 2013/09/02 - SAS 2013/09/19 - SAS 2013/09/23 - 2013/10/24 - 2013/11/26 - 2013/12/18 - 2013/12/19
+   RA 2015/07/02 - RA 2016/03/01
+ */
+
+/*
+ * Table of Contents
+ *
+ *  0. Reset
+ *
+ *  1. General
+ *      1.1 Functional Classes
+ *      1.2 Layout
+ *
+ *  2. Page Elements
+ *      2.1 Header
+ *          2.1.1 Alert
+ *          2.1.2 Header Search
+ *            2.1.3 Tools Slider Styles
+ *      2.2 Main Navigation
+ *          2.2.1 Absolute Positioning For Each Menu Element
+ *          2.2.3 Inside Navigation
+ *          2.2.4 Inside Navigation Slashes
+ *      2.3 Aside
+ *          2.3.1 Aside Content Types
+ *      2.4 Footer
+ *          2.4.1 Footnotes
+ *
+ *  3. Content Elements
+ *      3.1 Content Slider Styles
+ *      3.2 Home Content
+ *          3.2.1 Homepage Features
+ *          3.2.2 Index Page Features
+ *          3.2.3 Information Page Features
+ *      3.3 Warning Styles
+ *      3.4 Adjunct Styles (now in slq-global.css)
+ *      3.5 Editor Styles
+ *      3.6 Search Styles
+ *      3.7 Image Gallery Styles
+ *      3.8 Video and Audio Gallery Styles
+ *      3.9 Content Table Styles
+ *      3.10 Find a public library landing page
+ *        3.10.1 Individual library branch page
+ *
+ *  X. Responsive Elements
+ *      X.1 Tablet Landscape - max width 1024px
+ *      X.2 Tablet Design - max width 768px
+ *          X.2.1 Layout for Tablet Portrait Tablet
+ *          X.2.2 Header Search Form for Tablet Portrait
+ *          X.2.3 Drop down sizes for Tablet Portrait   
+ *          X.2.4 Inside Navigation for Tablet Portrait
+ *          X.2.5 Inside Content Slider for Tablet Portrait
+ *      X.3 Smartphone Design - max width 320px
+ *          X.3.1 Layout for Smartphone
+ *          X.3.2 Mobile Content
+ *          X.3.3 Mobile Footer
+ *          X.3.4 Main Navigation for Smartphone
+ *          X.3.5 Inside Navigation for Smartphone
+ *          X.3.6 Site top for Smartphone
+ *          X.3.7 Mobile Tabs
+ * 
+ */
+ 
+/*
+--------------------
+0. Reset
+--------------------
+*/
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, var,
+b, i,
+dl, dt, dd, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height: 1.3;
+    font-family: sans-serif, Verdana, Arial, "Helvetica Neue", Helvetica;
+    color: #242424;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+blockquote, q {
+    quotes:none;
+}
+ul {
+    /*list-style-position: outside;*/
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+label {
+    cursor: pointer;
+}
+h1 {
+    font-size: 140%;
+}
+h2 {
+    font-size: 150%;
+    color: #231f20;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+h3 {
+    font-size: 120%;
+    color: #231f20;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+h4 {
+    font-size: 110%;
+}
+h5 {
+    font-size: 105%;
+    font-weight:bold;
+}
+h6 {
+    font-weight:bold;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%; /* font-size:90%; */
+    vertical-align:baseline;
+    background:transparent;
+    color: #009fc3;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {text-decoration: underline;}
+
+p {
+    font-size: 90%;
+    line-height: 16px;
+    margin: 0 0 10px 0;
+}
+
+.more_link,
+.less_link {
+    display: block;
+    background: ;
+    padding: 0 0 0 12px;
+    font-weight: bold;
+}
+
+#content img{
+  max-width: 100%;
+
+  height: auto;
+}
+
+body #map img{
+  max-width: none;
+  height: auto;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #CCCCCC;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/* end html5doctor.com Reset Stylesheet */
+
+/* Mozilla Button CSS fix */
+button::-moz-focus-inner {
+    border:0;
+    padding:0;
+}
+
+.hidden {display:none;} /* Prevents FOUC (used in JQuery 'ready' function */
+ 
+
+/*
+--------------------
+1. General
+--------------------
+*/
+
+#skiplinks, #breadcrumbs ol, #footer ul, #footer-btm ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#skiplinks a {
+    color: #fff;
+    padding: 5px 8px;
+}
+#skiplinks li {
+    display: inline;
+    padding: 0 10px;
+}
+.block {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+.block .inner_block {
+    padding: 10px 5%;
+    width: auto;
+    height: auto !important;
+    height: 1%;
+    position: relative;
+    z-index: 2;
+}
+h1,h2,h3{
+    font-weight: normal;
+}
+h4,h5,h6{}
+
+/* ordered list reset from - http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/ */
+
+
+/* Show hide calendar right hand elements when calendar body class is applied */
+body #content #feature_1,
+body #content #smallcal {
+    display: none;
+}
+
+body.calendar #content #feature_1,
+body.calendar #content #smallcal {
+    display: block;
+}
+
+    /*
+    --------------------
+    1.1. Functional Classes
+    --------------------
+    */
+
+    #skiplinks, body .hide,
+    body #navigation .hide {
+        position: absolute;
+        left: -9999em;
+    }
+
+    .has-js .accessibility {
+        left: -99999em;
+        position: absolute;
+    }
+    .no-js .accessibility {
+        left: auto;
+        position: relative;
+    }
+    .print-link-url, #qg-logo img.print-version, #site-name img.print-version {
+        display: none;
+    }
+    .clear {
+        display: block;
+        clear: both;
+    }
+    .hide {
+        position: absolute !important;
+        left: -9999em !important;
+    }
+    .remove, .remove-js, .no-js .lazy, .no-js .loader {
+        display: none !important;
+    }
+    .invisible {
+        visibility: hidden !important;
+    }
+    .show {
+        visibility: visible !important;
+        display: block !important;
+    }
+    .fl-left {
+        float: left;
+    }
+    .fl-right {
+        float: right;
+    }
+    .no-padding-right {
+        padding-right: 0px !important;
+    }
+    .no-padding-left {
+        padding-left: 0px !important;
+    }
+
+    /*
+    --------------------
+    1.2. Layout - Desktop
+    --------------------
+    */
+    
+    #container-wrapper {
+        max-width: 1000px; /* Wider to support SLQ speech bubble */
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+    #container {
+        position: relative;
+        float: right;
+        width: 920px;
+    }
+    #site-top,
+    #header,
+    #footer,
+    #breadcrumb,
+    .float-wrapper
+     {
+        display: block;
+        position: relative;
+        max-width: 920px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+    }
+    #breadcrumb .inner
+     {
+        display: block;
+        position: relative;
+        width: 100%;
+        z-index: 3;
+    }
+    .float-wrapper .column-right {
+        width: 170px;
+        float: right;
+        position: relative;
+    }
+    .float-wrapper .column-left {
+        width: 750px;
+        float: left;
+        position: relative;
+    }
+
+.ie .float-wrapper .column-left {
+        z-index:200;
+}
+.ie #content {
+        z-index:10;
+}
+    
+/*
+--------------------
+2. Page Elements
+--------------------
+*/
+
+#container-wrapper .slq-logo {
+    position: absolute;
+    top: 5px;
+}
+
+
+#container-wrapper .slq-logo.desktop img{
+    /*Downsize high resolution SLQ device*/
+    width:70px;
+    height:65px;
+}
+
+#container-wrapper .slq-logo.tablet {
+    top: 24px;
+    display: none;
+    margin-left: 0px;
+}
+#container-wrapper .slq-logo.mobile {
+    display: none;
+}
+#site-top {
+    background: #FFF url(http://www.slq.qld.gov.au/__data/assets/image/0004/219343/bg-grid.png) 0px -2px;
+    padding: 0px 0px 0px 0px;
+    min-height: 28px;
+}
+    body.tablet #site-top {
+       min-height: 26px;
+    } 
+    body.mobile #site-top {
+       min-height: 36px;
+    }
+
+.mobile-strip {
+    display: none;
+}
+#mobile-tabs {
+    display: none;
+}
+    /*
+    --------------------
+    2.1 Header
+    --------------------
+    */  
+    #header {
+        position: relative;
+        /*
+        top: 40px;  
+        margin-top: -40px;
+        */ 
+    }
+.ie7.ie #header {
+        position: static;
+}
+    #site-strip {
+        background: #eb1c51 url(http://www.slq.qld.gov.au/__data/assets/image/0006/219354/header-strip-desktop.png) 0px 0px;
+        height: 3px;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    mobile .slq-logo-text img {
+        display: none;;
+    } /* Added SAS 2016/08/01 */
+    
+            /*
+            --------------------
+            2.1.1 Site Alerts
+            --------------------
+            */
+            #site-top .site-alert {
+                background: #380000;
+                border-top: 2px solid #4d0000;
+                display: block;
+                padding: 5px 12px 5px 12px;
+                margin: 0px 0px 5px 0px;
+                text-shadow: 1px 1px rgba(0,0,0,0.4);
+            }
+            #site-top .site-alert h1 {
+                color: #FF0000;
+                padding: 0px 0px 5px 0px;
+                margin: 0px;
+                font: bold 85% Verdana, Arial, Tahoma;
+            }
+            /* Added body to override slq-global.css - TNT */
+            body #site-top .site-alert p {
+                color: #FF0000;
+                padding: 0px 0px 5px 0px;
+                margin: 0px;
+                font: bold 75% Verdana, Arial, Tahoma;
+            }
+            #site-top .site-alert .clear-alerts {
+                border-top: 1px solid #a80404;
+                margin: 5px 0 0;
+                padding: 6px 0;
+                clear: both;
+            }
+            #site-top .site-alert .clear-alerts a {
+                color: #FF0000;
+                padding: 0px 0px 2px 23px;
+                margin: 0px;
+                font: bold 75% Verdana, Arial, Tahoma;
+                text-decoration: none;
+                background: url(http://www.slq.qld.gov.au/__data/assets/image/0017/220193/alert-button-sprite.png) 0px 0px no-repeat;
+            }
+            #site-top .site-alert .clear-alerts a:hover {
+                
+                color: #ff3333;
+                background-position: 0px -63px;
+                text-decoration: underline;
+            }
+
+            #site-top .site-alert iframe {
+                border: 0px;
+                background: #38000;
+                font-family: sans-serif, Verdana;
+                width: 100%;
+                height: 75px;
+            }
+                #site-top .site-alert iframe html,
+                #site-top .site-alert iframe body {
+                   background: #38000;
+                }
+            
+            /*
+            --------------------
+            2.1.2 Header Search
+            --------------------
+            */ 
+            #header #header-pan-search {
+                background: url(http://www.slq.qld.gov.au/__data/assets/image/0010/219349/header-filter-controls-bg.png) repeat-x scroll 0 0 #00B1B0;
+                display: block;
+                overflow: hidden;
+            }
+            #header #header-pan-search div.input {
+                background: transparent url(http://www.slq.qld.gov.au/__data/assets/image/0020/219350/header-search-bg.png) 0px 0px;
+                /*
+                width: 46%;
+                */
+                width: 360px;
+                height: 40px;
+                display: inline;
+                float: left;
+                
+            }
+            #header #header-pan-search #query {
+                font: normal 120% Sans-serif, Verdana, Arial, Tahoma;
+                color: #009fc3;
+                background: transparent;      
+                width: 85%;
+                margin: 7px 0px 0px 10px;
+                padding: 0px;
+                border: none;
+            }
+            #header #header-pan-search .input-reset {
+                position: relative;
+                top: 8px;
+                left: 2px;
+            }  
+            #header #header-pan-search .submit-button.tablet {
+                display: none;
+            }
+            #header #header-pan-search .submit-button {
+                height: 40px;
+                width: 92px;
+                /*
+                width: 11%;                
+                float: left;
+                */
+                float: left;
+                background: #bf1240 url(http://www.slq.qld.gov.au/__data/assets/image/0003/219351/header-search-button-bg-desktop.png) 0px 0px repeat-x;
+            }
+            #header #header-pan-search .submit-button input {
+                border: none;
+                background: transparent;
+                color: #FFF;
+                padding: 0px;
+                width: 100%;               
+                margin: 0px;
+                cursor: pointer;
+                font-size: 95%;
+            } 
+            #header #header-pan-search .filter-controls {
+                background: #00b1b0 url(http://www.slq.qld.gov.au/__data/assets/image/0010/219349/header-filter-controls-bg.png) 0px 0px repeat-x;
+                float: right;
+                text-align: left;
+                font-size: 110%;
+                color: #80d8d8;
+                padding: 7px 12px 0 0;
+            }
+            #header #header-pan-search .filter-controls ul,
+            #header #header-pan-search .filter-controls ul li {
+                list-style: none;
+                
+            }
+            #header #header-pan-search .filter-controls ul li {
+                display: block;
+                float: left;
+            }
+            #header #header-pan-search .filter-controls a {
+                color: #80d8d8;
+                font-size: 85%;
+                text-shadow: 1px 1px rgba(0, 0, 0, 0.2); 
+            }
+            #header #header-pan-search .filter-controls a:hover,
+            #header #header-pan-search .filter-controls a:focus,
+            #header #header-pan-search .filter-controls a.current  {
+                color: #FFF;
+                text-decoration: none;
+            }
+                #header #header-pan-search .filter-controls a:active,
+                #header #header-pan-search .filter-controls a.current:hover,
+                #header #header-pan-search .filter-controls a.current:active {
+                    text-decoration: none;
+                }
+            #header #header-pan-search .filter-controls span {
+                /* padding: 0px 10px 0px 10px; */
+                padding: 0 9px 0 9px;
+                color: #80d8d8;
+                position: relative;
+                top: 2px;
+            }
+            
+            #header #header-pan-search .filter-controls #more-search-option {
+                display: none;
+            }        
+           
+
+
+
+
+
+
+            
+            /*
+            --------------------
+            2.1.3 Tools Slider Styles
+            --------------------
+            */   
+            #tools-slider-container {
+                width: 170px;
+                height: 80px;
+                position: relative;
+                z-index: 110;
+                background: #3B3B3B;
+                float: right;
+            }
+            #tools-slider-content .tool-panel {
+                width: 170px;
+                height: 80px;
+                position: absolute;
+                background: #3c3c3c url(http://www.slq.qld.gov.au/__data/assets/image/0006/219372/tools-slider-sprite.png) 0px 0px no-repeat;
+            }
+                #tools-slider-content .tool-panel.contact {
+                    background-position: 0px -80px;
+                }
+                #tools-slider-content .tool-panel.wifi {
+                    background-position: 0px -160px;
+                }
+                #tools-slider-content .tool-panel.blogs {
+                    background-position: 0px -240px;
+                }
+                #tools-slider-content .tool-panel.librarian {
+                    background-position: 0px -320px;
+                }
+                #tools-slider-content .tool-panel.hide-js {
+                    z-index: 100;
+                }                                                
+            #tools-slider-content .tool-panel a {
+                position: absolute;
+                padding: 39px 0px 0px 168px;
+                margin: 0px 0px 0px 0px;
+                z-index: 100;
+            }
+            #tools-slider-nav {
+                left: 11px;
+                position: absolute;
+                top: 46px;
+            }
+            #tools-slider-nav a {
+                display: inline-block;
+                width:10px;
+                height: 18px;
+                border: 1px solid transparent;
+                position: relative;
+                top: 4px;
+                z-index: 200; /* Bring in front so links are clickable - TNT */
+            }
+            #tools-slider-nav a#tool-link-location {
+                margin-right: 13px;
+            }
+            #tools-slider-nav a#tool-link-contact {
+                width: 13px;
+                margin-right: 10px;
+            }
+            #tools-slider-nav a#tool-link-wifi {
+                width: 21px;
+                margin-right: 6px;
+            }
+            #tools-slider-nav a#tool-link-blogs {
+                width: 18px;
+                margin-right: 6px;
+            }
+            #tools-slider-nav a#tool-link-librarian {
+                width: 21px;
+            }
+    
+    /*
+    --------------------
+    2.2 Main Navigation
+    --------------------
+    */
+        
+        /*
+        --------------------
+        2.2.1 Absolute Positioning For Each Menu Element
+        --------------------
+        */
+        /* Order changed SAS 2013/08/26 */
+        
+        /* Search */
+        #nav-link-215606 {
+            left: 0px;
+        }
+        .tablet #nav-link-215606 {
+            left: 0px; 
+        }
+        #nav-link-215606 .sub-menu {
+            left: 0px;
+            width: 920px;
+        }
+        .tablet #nav-link-215606 .sub-menu {
+            width: 720px;
+        }
+        
+        /* Resources */
+        #nav-link-215489 {
+            left: 75px;
+        }
+        .tablet #nav-link-215489 {
+            left: 54px; 
+        }
+        #nav-link-215489 .sub-menu {
+            left: -75px;
+            width: 920px;                    
+        }
+        .tablet #nav-link-215489 .sub-menu {
+            left: -54px;
+            width: 720px;
+        }             
+        
+        /* Services */
+        #nav-link-215433 { 
+            left: 170px; 
+        }
+        .tablet #nav-link-215433 {
+            left: 130px; 
+        }
+        #nav-link-215433 .sub-menu { 
+            left: -170px; 
+            width: 920px; 
+        }
+        .tablet #nav-link-215433 .sub-menu { 
+            left: -130px;
+            width: 720px; 
+        }
+        
+        /* Showcase */
+        #nav-link-215593 {
+            left: 254px;
+        }
+        .tablet #nav-link-215593 {
+            left: 196px;
+        }
+        /*change its width down here yo!*/
+        .tablet #nav-link-215593 a{
+            padding-left:6px;
+            padding-right:6px;
+        }
+        #nav-link-215593 .sub-menu {
+            left: -254px;
+            width: 920px;       
+        }
+        .tablet #nav-link-215593 .sub-menu {
+            left: -196px;
+            width: 720px; 
+        }        
+        
+        /* What's on */ 
+        #nav-link-215662 {
+            left: 347px;
+        }
+        .tablet #nav-link-215662 {
+            left: 274px;
+        }
+        /*change its width down here yo! corin */
+        .tablet #nav-link-215662 a{
+            width:60px;
+            padding-left:0;
+            padding-right:0;
+        } 
+        #nav-link-215662 .sub-menu {
+            left: -347px;
+            width: 920px;                
+        }
+        .tablet #nav-link-215662 .sub-menu {
+            left:-274px;
+            width: 720px;
+        } 
+        .tablet #nav-link-215662 .sub-menu a{
+            padding-left:10px;
+            padding-right:10px;
+            width: auto;
+        }
+        
+        /* Audio Video */
+        #nav-link-215602 {
+            left: 433px; 
+        }
+        .tablet #nav-link-215602 {
+            left: 328px;
+        }
+        #nav-link-215602 .sub-menu {
+            left: -433px;
+            width: 920px;
+        }
+        .tablet #nav-link-215602 .sub-menu {
+            /*left: -494px; oldie*/
+            left: -328px; 
+            width: 720px; 
+        }
+        
+        /* Visit us */
+        #nav-link-215391 {
+            left: 534px;
+        }
+        .tablet #nav-link-215391 {
+            left: 408px;
+        }
+        #nav-link-215391 .sub-menu {
+            left: -534px;
+            width: 920px;
+        }
+        .tablet #nav-link-215391 .sub-menu {
+            left:-408px;
+            width: 720px;
+        }
+        
+        /* About us */
+        #nav-link-215324 {
+            left: 602px; 
+        }
+        .tablet #nav-link-215324 {
+            left: 465px;
+            /*border-bottom:solid 2px deeppink;*/
+        }
+        #nav-link-215324 .sub-menu {
+            left: -602px;
+            width: 920px;
+        }
+        .tablet #nav-link-215324 .sub-menu {
+            /* left: -328px; oldie */
+            left:-465px;
+            width: 720px;
+        }
+        
+        
+       
+        
+    #navigation.float-wrapper {
+        display: block;
+        position: relative;
+        z-index:150;
+        max-width: 920px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+        overflow: visible;
+        top: -40px;
+        /* Apply when no JS somehow
+        top: 0px;
+        */
+    }
+    #tabs {
+        position: relative;
+    }
+    #menu a {
+        color: #FFF;
+        display: inline-block;
+        padding: 11px 12px 10px 12px;
+        font-size: 90%;
+        text-decoration: none;
+    }
+    #menu a:visited, #menu a:link, #menu a:active {
+    text-decoration: none;
+    }
+
+    #menu a:hover,
+    #menu a:focus {
+        color: #FFF;
+    }
+    #menu a.hier {
+        color: #75e4ff;
+        text-decoration: underline;
+        /* background: transparent url(http://www.slq.qld.gov.au/__data/assets/image/0009/219357/menu-item-pointer.png) bottom center no-repeat; clashes with the inside nav slashes - Squiz TNT */
+    }
+    #menu a.current {
+        color: #75e4ff;
+        text-decoration: underline;
+        background: transparent url(http://www.slq.qld.gov.au/__data/assets/image/0009/219357/menu-item-pointer.png) bottom center no-repeat;
+    } 
+    .sub-menu {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      list-style: none;
+      padding: 0px 0px 3px 0px;
+      margin: 0;
+      display: none;
+      z-index: 900;
+      height: auto;
+      background: #007994 url(http://www.slq.qld.gov.au/__data/assets/image/0006/219525/sub-menu-dropdown-full-size-bg.png) bottom left repeat-x;
+    }
+    .sub-item {
+
+        display: block;
+        float: left;
+        height: 40px;
+        z-index: 100;
+        position: relative;
+        background: #029ec1 url(http://www.slq.qld.gov.au/__data/assets/image/0011/219368/primary-nav-bg-colours-desktop.png) 0px 0px;
+        z-index: 900;
+    }
+        #menu .menu-item .sub-item a {
+            background: #029ec1 url(http://www.slq.qld.gov.au/__data/assets/image/0011/219368/primary-nav-bg-colours-desktop.png) 0px 0px;
+            display: block;
+            float: left;
+            /*    color: #00313C;
+                  text-shadow: 1px 1px rgba(255, 255, 255, 0.4);
+            */
+            color: white;
+            text-shadow: 1px 1px rgba(20, 20, 50, 0.3);
+            z-index: 900;       
+        }
+        #menu .menu-item .sub-item a:hover,
+        #menu .menu-item .sub-item a:focus {
+            color: #FFF;
+            text-shadow: 1px 1px rgba(100, 100, 100, 0.4);
+            text-decoration: underline;
+        }
+        #menu .menu-item .sub-item:hover {
+            
+        } 
+    .sub-item:hover { }
+    .sub-item:hover .third-level { display: inline-block; position: relative; }
+
+    #menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      width: auto;
+      position: relative;
+      z-index: 100;
+    }
+    .menu-item {
+      position: absolute;
+      height: 40px;
+    }
+        .menu-item a {
+            background: #3C3C3C url(http://www.slq.qld.gov.au/__data/assets/image/0003/219369/primary-nav-bg-desktop.png) 0px 0px repeat-x;
+            text-shadow: 1px 1px rgba(0, 0, 0, 1);
+        }
+        body.desktop .menu-item a {
+            height: 19px;
+        }
+        body.tablet .menu-item a {
+            height: 16px;
+        }        
+    .menu-item:hover, .menu-item:hover a { text-decoration: underline;}
+    .menu-item:hover a {
+        background: transparent url(http://www.slq.qld.gov.au/__data/assets/image/0009/219357/menu-item-pointer.png) bottom center no-repeat;
+    }
+    body.no-js #navigation .menu-item:hover .sub-menu { display: inline-block; position: relative; z-index: 100; }
+    
+    #tab-background {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: #3C3C3C url(http://www.slq.qld.gov.au/__data/assets/image/0003/219369/primary-nav-bg-desktop.png) 0px 0px repeat-x;
+        height: 40px;
+        width: 750px;
+        display: block;
+    }
+    #drop-down-spacer {
+        height: 0px;
+        /*background: #3d3d3d url(http://www.slq.qld.gov.au/__data/assets/image/0008/219347/dropdown-spacer-bg.png) 0px 0px;   */
+        background: #FFF url(http://www.slq.qld.gov.au/__data/assets/image/0004/219343/bg-grid.png) 0px 0px;
+    }
+    .ie #drop-down-spacer {
+        z-index: -1;
+    }
+    
+        /*
+        --------------------
+        2.2.3 Inside Navigation
+        --------------------
+        */
+        #inside-navigation {
+            /*
+            opacity: 0.6;
+            */
+            position: relative;
+            display: block;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        .ie #inside-navigation {
+            z-index: -1;
+        }
+        .inside-navigation-list,
+        .inside-navigation-list li {
+            list-style: none;
+            background: #3C3C3C url(http://www.slq.qld.gov.au/__data/assets/image/0003/219369/primary-nav-bg-desktop.png) 0px 0px repeat-x;
+            white-space: nowrap;
+        }
+        .inside-navigation-list {
+            width: 100%;
+            overflow: hidden;
+        }
+        .inside-navigation-list li {
+            display: block;
+            float: left;
+            height: 40px;
+        }
+        .inside-navigation-list li a {
+            color: #FFF;
+            display: block;
+            padding: 11px 12px 11px 12px;
+            font-size: 14px;
+            white-space: nowrap;
+        }  
+        .inside-navigation-list li a:hover,
+        .inside-navigation-list li a:focus,
+        .inside-navigation-list li a.hier:hover,
+        .inside-navigation-list li a.current:hover,
+        .inside-navigation-list li a.hier:focus,
+        .inside-navigation-list li a.current:focus {
+            text-decoration: underline;
+            color: #FFF;
+            text-shadow: 1px 1px rgba(100, 100, 100, 0.4); 
+        }      
+        .inside-navigation-list li a.hier {
+            text-decoration: underline;
+            color: #FFF;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.4);  
+        }
+        .inside-navigation-list li a.current {
+            text-decoration: underline;
+            color: #FFF;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.4);             
+        }
+
+    .inside-navigation-list.eighth-level, .inside-navigation-list.eighth-level li, .inside-navigation-list.eighth-level a {
+        background: #525252 url(http://www.slq.qld.gov.au/__data/assets/image/0004/221368/nav-level-eight-bg.png) bottom left repeat-x;
+        color: rgba(255,255,255,0.8);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    }
+        .inside-navigation-list.eighth-level li, .inside-navigation-list.eighth-level a {
+            background-position: 0px 0px;
+        }
+
+    .inside-navigation-list.seventh-level, .inside-navigation-list.seventh-level li, .inside-navigation-list.seventh-level a {
+        background: #85b70e url(http://www.slq.qld.gov.au/__data/assets/image/0017/221372/nav-level-seven-bg.png) bottom left repeat-x;
+        color: rgba(255,255,255,0.8);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    }
+        .inside-navigation-list.seventh-level li, .inside-navigation-list.seventh-level a {
+            background-position: 0px 0px;
+        }
+
+    .inside-navigation-list.sixth-level, .inside-navigation-list.sixth-level li, .inside-navigation-list.sixth-level a {
+        background: #d6772c url(http://www.slq.qld.gov.au/__data/assets/image/0018/221373/nav-level-six-bg.png) bottom left repeat-x;
+        color: rgba(255,255,255,0.8);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    }
+        .inside-navigation-list.sixth-level li, .inside-navigation-list.sixth-level a {
+            background-position: 0px 0px;
+        }
+
+    .inside-navigation-list.fifth-level, .inside-navigation-list.fifth-level li, .inside-navigation-list.fifth-level a {
+        background: #009a99 url(http://www.slq.qld.gov.au/__data/assets/image/0005/221369/nav-level-five-bg.png) bottom left repeat-x;
+        color: rgba(255,255,255,0.8);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    }
+        .inside-navigation-list.fifth-level li, .inside-navigation-list.fifth-level a {
+            background-position: 0px 0px;
+        }
+
+    .inside-navigation-list.fourth-level, .inside-navigation-list.fourth-level li, .inside-navigation-list.fourth-level a {
+        background: #038180 url(http://www.slq.qld.gov.au/__data/assets/image/0015/221370/nav-level-four-bg.png) bottom left repeat-x;
+        color: rgba(255,255,255,0.8);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    }
+        .inside-navigation-list.fourth-level li, .inside-navigation-list.fourth-level a {
+            background-position: 0px 0px;
+        }
+        
+    .inside-navigation-list.third-level, .inside-navigation-list.third-level li, .inside-navigation-list.third-level a {
+        background: #913e5a url(http://www.slq.qld.gov.au/__data/assets/image/0019/221374/nav-level-three-bg.png) bottom left repeat-x;
+        color: rgba(255,255,255,0.8);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);           
+    }  
+        .inside-navigation-list.third-level li, .inside-navigation-list.third-level a {
+            background-position: 0px 0px;
+        }
+    .inside-navigation-list.second-level, .inside-navigation-list.second-level li, .inside-navigation-list.second-level a {
+        background: #5e5280 url(http://www.slq.qld.gov.au/__data/assets/image/0020/221375/nav-level-two-bg.png) bottom left repeat-x;
+        color: rgba(255,255,255,0.8);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);          
+    }
+        .inside-navigation-list.second-level li, .inside-navigation-list.second-level a {
+            background-position: 0px 0px;
+        }
+
+    .inside-navigation-list.first-level, .inside-navigation-list.first-level li, .inside-navigation-list.first-level a {
+        background: #007994 url(http://www.slq.qld.gov.au/__data/assets/image/0016/221371/nav-level-one-bg.png) bottom left repeat-x;
+        color: rgba(255,255,255,0.8);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);          
+    }
+        .inside-navigation-list.first-level li, .inside-navigation-list.first-level a {
+            background-position: 0px 0px;
+        }
+        
+        /*
+        --------------------
+        2.2.4 Inside Navigation Slashes
+        --------------------
+        */
+        .inside-navigation-list li.trail-link a.current, .inside-navigation-list li.trail-link a.hier {
+            background: #333 url(http://www.slq.qld.gov.au/__data/assets/image/0011/223868/inside-nav-slashes-sprite.png) right top no-repeat;
+            padding-right: 22px;
+        }
+
+        body.mobile .inside-navigation-list li.trail-link a.current, body.mobile .inside-navigation-list li.trail-link a.hier {
+            background: #333 url(http://www.slq.qld.gov.au/__data/assets/image/0016/224134/inside-nav-slashes-sprite-no-slashes.png) right top no-repeat;
+            padding-right: 8px;
+        }
+            .inside-navigation-list li#level-0-trail-link a.current, .inside-navigation-list li#level-0-trail-link a.hier {
+                background-color: #029ec1;
+                background-position: right top;
+            }
+            .inside-navigation-list li#level-1-trail-link a.current, .inside-navigation-list li#level-1-trail-link a.hier {
+                background-color: #8676b7;
+                background-position: 100% -40px;
+            }
+            .inside-navigation-list li#level-2-trail-link a.current, .inside-navigation-list li#level-2-trail-link a.hier {
+                background-color: #d05981;
+                background-position: 100% -80px;                
+            }
+            .inside-navigation-list li#level-3-trail-link a.current, .inside-navigation-list li#level-3-trail-link a.hier {
+                background-color: #00a09f;
+                background-position: 100% -120px;                
+            }
+            .inside-navigation-list li#level-4-trail-link a.current, .inside-navigation-list li#level-4-trail-link a.hier {
+                background-color: #00b1b0;
+                background-position: 100% -160px;                
+            }
+            .inside-navigation-list li#level-5-trail-link a.current, .inside-navigation-list li#level-5-trail-link a.hier {
+                background-color: #f68933;
+                background-position: 100% -200px;                
+            }
+            .inside-navigation-list li#level-6-trail-link a.current, .inside-navigation-list li#level-6-trail-link a.hier {
+                background-color: #99d210;
+                background-position: 100% -240px;                
+            }         
+            .inside-navigation-list li#level-7-trail-link a.current, .inside-navigation-list li#level-7-trail-link a.hier {
+                background-color: #5e5e5e;
+                background-position: 100% -280px;                
+            }                                                                             
+                
+    /*
+    --------------------
+    2.3 Aside
+    --------------------
+    */
+    #aside {
+    }
+    #aside a {
+    }
+    #aside .white a,
+    #aside .white p,
+    #aside .white p a {
+        color: #231f20;
+    }
+    #aside ul{
+        list-style-image: url();
+        margin: 0 0 0 15px;
+        padding: 0;
+    }
+    #aside .white ul{
+        list-style-image: url();
+    }
+    #aside h2 {
+        margin: 0 0 5px 0;
+    }    
+    
+        /*
+        --------------------
+        2.3.1 Aside Content Types
+        --------------------
+
+        */
+        
+        #aside .aside-content.location-banner {
+            width: 170px;
+            height: 72px;
+            padding-bottom: 20px;
+            background: #FFF;
+        }
+        #aside .aside-content.article-image {
+            padding: 0px 0px 20px 0px;
+            margin: 0px;
+            background: #FFF;
+        }
+        #aside .aside-content.article-image p {
+            color: #9a9a9a;
+            font-size: 65%;
+            padding: 0px;
+            margin: 0px;
+        }
+        #aside .aside-content.article-image img {
+            margin: 0px 0px 10px 0px;
+            padding: 0px;
+        }
+        #aside .aside-content.tag-information {
+            background: #FFF url(http://www.slq.qld.gov.au/__data/assets/image/0004/219343/bg-grid.png) -3px -2px;
+            padding: 24px 0px 24px 0px;
+        }
+        #aside .aside-content.tag-information a {
+            border: 1px solid #bbd12f;
+            padding: 5px;
+            display: inline-block;
+            background: #c1d831;
+            font-size: 75%;
+            margin: 0 7px 7px 0;
+            color: #FFF;
+        }
+        #aside .aside-content.no-padding {
+            padding: 0px 0px 0px 0px;
+        }
+        body.mobile .column-right #aside .aside-content {
+            padding-left: 10px;
+            padding-right: 10px;
+        } 
+        body.mobile #aside .aside-content.tag-information {
+            padding: 15px 10px 10px 10px;
+            margin-bottom: 20px;
+        }
+    
+        /*
+        --------------------
+        2.4 Footer
+        --------------------
+        */
+        #footer.float-wrapper {
+            background: #2c2c2c url(http://www.slq.qld.gov.au/__data/assets/image/0009/219339/bg-grid-footer.png) 0px 0px;
+        }
+        #footer.float-wrapper .column-left {
+            background: #3e3e3e;
+            padding: 0px 0px 40px 0px;
+        }
+        #footer.float-wrapper .column-left .inner {
+            padding: 20px 0px 0px 20px;
+        }
+
+        #footer {
+            background: #3e3e3e;
+            overflow: hidden;
+        }
+        #footer a,
+        #footer p a {
+            color: #FFF;
+        }
+        #fat-footer {
+            overflow: hidden;
+            margin: 0 0 10px 0;
+        }
+        #fat-footer .section {
+            margin: 0;
+            width: 150px;
+            vertical-align: top;
+            padding: 0px 0px 20px 0px;
+            margin-right: 20px;
+            float: left;
+        }
+        #footer h3 {
+            color: #8f8f8f;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+            font-size: 105%;
+        }
+        #footer h3 a {
+            color: #8f8f8f;
+            margin: 5px 0;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+        }
+        #footer h3 a:hover {
+            text-decoration: underline;
+        }
+        #footer li {
+            display: block;
+            float: none;
+            padding: 0.3em 0.5em 0.3em 0;
+            font-size: 70%;
+        }
+        #footer li a {
+            text-decoration: underline;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+        }
+        #footer li a:hover {
+            text-decoration: none;
+        }
+        #footer .lower-content a {
+            font-size: 70%;
+            text-decoration: underline;
+        }
+        #footer .lower-content a:hover {
+            text-decoration: none;
+        }
+        #footer .slq-logo {
+            position: relative;
+        }
+        #footer .qld-logo {
+            position: relative;
+            top: 9px;
+            left: 30px;
+        }
+        #footer .lower-content .lower-links {
+            padding: 30px 0px 25px 0px;
+        }
+        #footer .column-right .feature {
+            display: block;
+            padding: 12px 14px 14px 14px;
+            background: #5e5e5e;
+            font-size: 110%;
+        }
+        #footer .column-right .feature {
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+        }
+        #footer .feature.green {
+            background-color: #99d210;
+        }
+        #footer .feature.yellow {
+            background-color: #fec222;
+        }
+        #footer .feature.dark-pink {
+            background-color: #fe1f6e;
+        }
+        #footer .feature.purple {
+            background-color: #8982bd;
+        }
+        #footer .feature.blue {
+            background-color: #17a6c7;
+        }
+        #footer .feature.light-pink {
+            background-color: #d3658a;
+        }
+        #footer .feature.aqua {
+            background-color: #00b1b0;
+        }
+        #footer .feature.orange {
+            background-color: #f68933;
+        }
+        #footer .feature.aqua.cc-logo {
+            background: #00b1b0 url(http://www.slq.qld.gov.au/__data/assets/image/0012/221520/cc-logo.gif) 118px 15px no-repeat;
+        }
+        #footer .feature.facebook-blue{
+            background:#4C66A4;
+        }
+        #footer .feature.heavy-grey{
+            background:#373737;
+        }
+        #footer .feature.qanzac-blue{
+            background:#002F6C;
+        }
+        /*
+        --------------------
+        2.4.1 Footnotes
+        --------------------
+        */ 
+        body.home #footnotes {
+            display: none;
+        }   
+        #footnotes {
+            background: #ececec url(http://www.slq.qld.gov.au/__data/assets/image/0008/219338/bg-grid-dark.png) 0px 0px;
+        }
+        #footnotes .column-right {}
+        #footnotes .column-left {
+            background: #f9f9f9 url(http://www.slq.qld.gov.au/__data/assets/image/0020/219341/bg-grid-light.png) 0px 0px;
+            color: #999;
+        }
+        #footnotes .column-left .inner {
+            padding: 22px;
+        }
+        #footnotes .column-left p,
+        #footnotes .column-left li,
+        #footnotes .column-left h4 {
+            color: #999;
+            font-weight: normal;
+        }
+        #footnotes .column-left h4 {
+            font-size: 75%;
+            margin: 0px 0px 10px 0px;
+        }
+        #footnotes .column-left ol {
+            margin: 0px 0px 10px 0px;
+        }
+        #footnotes .column-left li,
+        #footnotes .column-left p {
+            font-size: 70%;
+        }
+        #footnotes .column-left a {
+            color: #00b1b0;
+            text-decoration: underline;
+            font-size: 100%;
+        }
+        #footnotes .column-left a:hover {
+            color: #00b1b0;
+            text-decoration: none;
+        }
+        #footnotes ol{
+            margin: 0;
+            padding: 0;
+        }
+
+/*
+--------------------
+3. Content Elements
+--------------------
+*/
+#main-content {
+    position: relative;
+}
+#main-content .inner {
+    width: auto;
+    padding: 20px 20px 20px 0;
+}
+.content h1 {
+    color: #3b3b3b;
+    font-size: 160%;
+    letter-spacing: 1px;
+}
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    margin-top: 10px;
+}
+.content hr {
+    padding: 0px;
+    margin: 0px 0px 13px 0px;
+}
+.content p {
+    font-size: 75%;
+    color: #444;
+    line-height: 2em;
+}
+.content a {
+    text-decoration: underline;
+}
+.content a:hover {
+    text-decoration: none;
+}
+.content ul {
+    padding: 0px 0px 0px 20px;
+}
+    .content form ul {
+        list-style: none;
+        padding: 0px 0px 0px 0px;
+    }
+.content ul li,
+.content ul li p {
+    font-size: 100%;
+    color: #444444;
+}
+.content.text {
+    color: #444444;
+    font-size: 75%;
+    line-height: 2em;
+    background: #FFF;
+}
+.content.text p {
+    font-size: 100%
+}
+.content.text h1 {
+    font-size: 190%;
+    line-height: normal;
+}
+.content.text .content-author-date p,
+.content.text p.content-author-date  {
+    font-size: 90%;
+    color: #aaa;
+    padding-bottom: 3px;
+    margin-bottom: 0px;
+}
+    /*
+    --------------------
+    3.1 Content Slider Styles
+    --------------------
+    */     
+    #main-content #content-slider-container {
+        border-top: 3px solid #00b1b0;
+        width: 440px;
+        background: url(http://www.slq.qld.gov.au/__data/assets/image/0020/219341/bg-grid-light.png) repeat scroll 0 0 #ECECEC;
+        position: relative;
+        display: block;
+        float: left;
+        margin-right: 20px;
+    }
+    #main-content #content-slider-container ul {
+        padding: 0px 0px 5px 5px;
+    }
+    #main-content #content-slider-container ul,
+    #main-content #content-slider-container ul li {
+        list-style: none;
+    }
+    #main-content #content-slider-container ul li {
+        font-size: 90%;
+        color: #555;
+    }
+    #main-content #content-slider-container ul li a.slider-nav-link {
+        display: block;
+        color: #888;
+        text-decoration: none;
+    }
+    #main-content #content-slider-container ul li a.slider-nav-link:hover {
+        color: #000;
+        text-decoration: underline;
+    }
+    #main-content #content-slider-container ul li a.slider-nav-link.current {
+        color: #444;
+        text-decoration: underline;
+    }
+    #main-content #content-slider-container ul li a.slider-nav-link.current:hover {
+        color: #000;
+    }
+    #main-content #content-slider-container ul li a {
+        padding-top: 5px;
+        color: #00b1b0;
+        text-decoration: underline;
+        line-height: normal;
+    }
+    #main-content #content-slider-container ul li a:hover {
+        color: #00b1b0;
+        text-decoration: none;
+    }
+    #main-content #content-slider-container #content-slider-content {
+        width: 440px;
+        height: 285px;
+    }
+    #main-content #content-slider-container #content-slider-nav a {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        position: relative;
+        border: 1px solid transparent;
+        background: transparent url(http://www.slq.qld.gov.au/__data/assets/image/0007/219346/content-sliding-gallery-bullets.png) no-repeat 0px 0px;
+        margin-right: 2px;
+    }
+    #main-content #content-slider-container #content-slider-nav {
+        left: 5px;
+        position: absolute;
+        top: 265px;
+        z-index: 100;
+    }
+    #main-content #content-slider-container #content-slider-nav a:hover {
+        background-position: 0px -22px;
+    }
+    #main-content #content-slider-container #content-slider-nav a.current {
+        background-position: 0px -43px;
+    }
+    #main-content #content-slider-content .content-tab {
+        position: absolute;
+        width: 440px;
+        height: 285px;
+    }
+    body.no-js #main-content #content-slider-container {
+        margin-bottom: 20px;
+    }
+    body.no-js #main-content #content-slider-container #content-slider-nav {
+        display: none;
+    }
+    body.no-js #main-content #content-slider-container #content-slider-content {
+        height: auto;
+    } 
+    body.no-js #main-content #content-slider-container #content-slider-content .content-tab {
+        position: static;
+        padding-bottom: 20px;
+    }
+    
+    /*
+    --------------------
+    3.2 Homepage Content
+    --------------------
+    */       
+    .home #content {
+        background: url(http://www.slq.qld.gov.au/__data/assets/image/0004/219343/bg-grid.png) repeat scroll 0 -2px #FFFFFF;
+        padding-top: 8px;
+    }
+    body.desktop.ie7.home #content {
+        padding-bottom: 10px;
+    }
+    .home #content .box {
+        float: left;
+        width: 300px;
+        height: 300px;
+        background: transparent;
+        overflow: hidden;
+        margin: 0px 10px 10px 0px;
+    }
+    body.desktop.home #content .box.pos-3,
+    body.desktop.home #content .box.pos-6,
+    body.desktop.home #content .box.pos-9,
+    body.desktop.home #content .box.pos-12,
+    body.desktop.home #content .box.pos-15,
+    body.desktop.home #content .box.pos-18,
+    body.desktop.home #content .box.pos-21,
+    body.desktop.home #content .box.pos-24 {
+        margin-right: 0px;
+    }
+
+        /*
+
+        --------------------
+        3.2.1 Homepage Features
+        --------------------
+        */          
+        .home #content .box {
+            overflow: hidden;
+        }
+        /* Leave it up to SLQ to set styles for each homepage box
+        .home #content .box h2,
+        .home #content .box p,
+        .home #content .box a {
+            color: #FFF;
+        }
+        .home #content .box h2 {
+            padding: 20px 20px 10px 20px;
+            margin: 0px;
+        }
+        .home #content .box p {
+            padding: 0px 20px 10px 20px;
+            margin: 0px
+        }
+        .home #content .box a {
+            padding: 0px 20px 10px 20px;
+            margin: 0px            
+        }
+        */
+        .home #content .box .feature-twitter {
+            background: transparent url(http://www.slq.qld.gov.au/__data/assets/image/0008/219374/twitter-feature-bg-desktop.png) no-repeat 0px 0px;
+            height: 300px;
+        }
+        .home #content .box .feature-twitter .twtr-widget {
+            padding: 20px 0px 0px 60px;
+        }
+        .home #content .box .feature-twitter .twtr-hd,
+        .home #content .box .feature-twitter .twtr-ft,
+        .home #content .box .feature-twitter .twtr-widget .twtr-tweet-text em,
+        .home #content .box .feature-twitter .twtr-widget .twtr-new-results {
+            display: none;
+        }
+        .home #content .box .feature-twitter .twtr-widget .twtr-tweet {
+            border: none;
+        }
+        .home #content .box .feature-twitter .twtr-tweet-text .twtr-user {
+            display: block;
+            font-weight: bold;
+            font-size: 110%;
+            padding-bottom: 10px;
+        }
+        .home #content .box .feature-twitter .twtr-tweet-text a {
+            font-size: 100%;
+        }
+        .home #content .box .feature-facebook {
+            background: #333;
+        }
+
+        /* new twitter styles */
+        .tweets-slq{
+            color: white;
+            height: 225px;
+            list-style-type: none;
+            margin: 0 0 0 0.5em;
+            overflow: hidden;
+            padding: 0.9em 0 0;
+            position: relative;
+        }
+        .tweets-slq a{
+            color: white;
+            text-shadow: 1px 1px 1px #017599;
+            font-weight: bold;
+        }
+        .tweets-slq h3 {
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+        .tweets-slq h3 a{
+            font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
+            font-size: 0.6em;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #017599;
+        }
+        .tweets-slq h3 span{
+            margin-left: 1.4em;
+            vertical-align: top;
+        }
+        .tweets-slq h3 span:hover {
+            text-decoration: underline;
+        }
+        .tweets-slq a img{
+            border-radius: 4px;
+            float: left;
+            margin-left: 0.2em;
+            padding: 0;
+            width: 30px;
+            box-shadow: 1px 1px 3px #111111;
+        }
+        .tweets-slq p{
+            font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
+            font-size: 0.7em;
+            margin: -1em 0 0 4.75em;
+            padding-right: 5px;
+        }
+        .tweets-slq li{
+            margin-bottom: 0.5em;
+        }
+        .feature-twitter .loading{
+            color: white;
+            padding: 2em 3em 3em 5em;
+        }
+        .feature-twitter .twitter-title{
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            line-height: 1em;
+            margin: 0 0 0 3.25em;
+            opacity: 0.5;
+            padding: 1.6em 0 0 0.2em;
+            text-shadow: 1px 1px 1px #017599;
+        }
+        /* end of new twitter styles*/
+        /*
+        --------------------
+        3.2.2 Index Page Features
+        --------------------
+        */  
+        .index-pages {
+            overflow: hidden; 
+            background-color: #CCC; 
+            background: url(http://www.slq.qld.gov.au/__data/assets/image/0004/219343/bg-grid.png); 
+            margin: 0px !important; 
+            padding: 0px 0px 10px 0px !important; 
+            line-height: 1.3 !important; 
+            border-right:solid 1px #ebebeb; 
+            border-bottom:solid 1px #ebebeb; 
+        } /* Revised for new index page layout - SAS 2013/06/14 */
+            .index-pages .index-list { 
+                background-color: #FFF; 
+                border: 1px solid #EBEBEB; 
+            }  /* Added for new index page layout - SAS 2013/06/14 */
+            /* Responsive elements handled here */
+            body.desktop .index-pages .index-list {
+                padding: 10px;
+                display: inline-block;
+                float: left;
+                width: 209px;
+                height: 250px;
+                overflow: hidden;
+                margin: 10px -1px -2px 10px;
+            }  /* Revised padding, added height, bgcolor, margins, border for new index page layout - SAS 2013/06/14 */
+            body.tablet .index-pages .index-list {
+                padding: 10px;
+                display: inline-block;
+                float: left;
+                width: 229px;
+                height: 250px;
+                overflow: hidden;
+                margin: 10px -1px -2px 10px;
+            }  /* Revised width, added height, overflow for new index page layout - SAS 2013/06/14. */
+            body.mobile .index-pages .index-list {
+                width: 290px;
+                padding: 10px 15px 10px 15px;
+                display: block;
+                   height: auto; 
+                   margin: 0;
+                border:none;
+                border-top:solid 1px #ebebeb;
+            } /* Revised for new index page layout - SAS 2013/06/14. */
+            body.mobile .index-pages {
+                background: none;
+                border: none;
+            } /* Added for new index page layout - SAS 2013/06/14. */
+                body.mobile #main-content .inner .index-pages .index-list h2 {
+                    padding: 0px 0px 0px 0px;
+                }                  
+                body.mobile #main-content .inner .index-pages .index-list .index-list-desc { 
+                    padding: 0px;
+                } /* Added for new index page layout - SAS 2013/06/14. */
+                body.mobile #main-content .inner .index-pages .index-list ul { 
+                    padding: 0px;
+                } /* Added for new index page layout - SAS 2013/06/14. */   
+           .index-list, .index-list a { 
+                font-size:8pt; 
+                color: #000; 
+                margin-bottom: 0px; 
+            } /* Added for new index page layout - SAS 2013/06/14. */
+        .index-pages .index-list h2 {
+            font-size: 95%;
+            padding: 0px;
+            margin: 0px;
+        }
+        .index-pages .index-list h2 a {
+            color: #444444; 
+            font-size: 14pt; 
+            font-weight: bold; 
+        } /* Revised for new index page layout - CE 2013/03/18 */
+        .index-list h2 a:link { color: #00857E !important; font-weight: normal; text-decoration: none; } /* Added for new index page layout - SAS 2013/06/14. */
+        .index-list h2 a:visited { color: #00a4a1 !important; font-weight: normal; text-decoration: none; } /* Added for new index page layout - SAS 2013/06/14. */
+        .index-list h2 a:hover { color: #e0003f !important; font-weight: normal; text-decoration: underline; } /* Added for new index page layout - SAS 2013/06/14. */           
+        #main-content .index-pages .index-list ul {
+            padding: 0px 0px 0px 0px;
+        }
+        .index-pages .index-list ul,
+        .index-pages .index-list li {
+            list-style: none; 
+        }
+        .index-pages .index-list li {
+            line-height:1.6em; 
+            padding-top: 3px; 
+            padding-right: 5px; /* Added SAS 2013/12/18 */
+            display: inline;
+        } /* Revised for new index page layout - SAS 2013/06/14 */
+        .index-list ul a:link { color: #00857E ; font-weight: normal; text-decoration: underline; } /* Added for new index page layout - SAS 2013/06/14. */
+        .index-list ul a:visited { color: #666 ; font-weight: normal; text-decoration: none; } /* Added for new index page layout - SAS 2013/06/14. */
+        .index-list ul a:hover { color: #e0003f ; font-weight: normal; text-decoration: underline; } /* Added for new index page layout - SAS 2013/06/14. */
+        .index-pages .clear {
+            display: block;
+            clear: both;
+            height: 3px;
+            background: #feeddb url(http://www.slq.qld.gov.au/__data/assets/image/0008/219356/index-break-bg.png) 0px 0px repeat-x;
+        }
+
+        /*
+        --------------------
+        3.2.3 Information Page Features
+        --------------------
+        */ 
+        
+        /* Desktop + Baseline styles */
+        #main-content #information-boxes {
+            overflow: hidden;
+            padding: 0px 0px 0px 0px
+        }
+        #main-content .information-box,
+        #main-content .information-box a {
+            display: block;
+        }
+        #main-content .information-box {
+            margin: 0px 10px 10px 0px;
+            float: left;
+        }
+        #main-content .information-box .inner {
+            padding: 0px;
+        }
+        #main-content .information-box a {
+            background: #e4e1f5;
+            color: #060040;
+            text-decoration: none;
+            line-height: normal;
+            padding: 5px;
+            width: 120px;
+            height: 80px;
+            text-align: center;
+            font-size: 120%;
+        }
+        #main-content .information-box a:hover {
+            text-decoration: underline;
+            background: #d1cded url(http://www.slq.qld.gov.au/__data/assets/image/0020/221492/bg-grid-blue.png) 7px 7px;
+        }
+
+        /* Tablet styles */
+        body.tablet #main-content .information-box {
+            margin: 0px 20px 20px 0px;
+            float: left;
+        }
+        body.tablet #main-content .information-box a {
+            width: 140px;
+        }
+
+        /* Tablet styles */
+        body.mobile #main-content #information-boxes {
+            padding: 0px 0px 0px 15px
+        }
+        body.mobile #main-content .information-box {
+            margin: 0px 10px 10px 0px;
+            float: left;
+        }
+        body.mobile #main-content .information-box a {
+            width: 130px;
+        }
+        
+    /*
+    --------------------
+    3.3 Warning Styles
+    --------------------
+    */  
+    #main-content div.warning {
+        background: #fff4b8;
+        padding: 10px;
+        text-shadow: 1px 1px rgba(255,255,255,0.3);
+        margin-bottom:10px;
+    }      
+    #main-content div.warning h1,
+    #main-content div.warning h2,
+    #main-content div.warning h3,
+    #main-content div.warning h4,
+    #main-content div.warning h5,
+    #main-content div.warning h6{
+        color:#FF3333;
+        margin-top:0px;
+    }        
+    #main-content div.warning p,
+    #main-content div.warning ul li,
+    #main-content div.warning ul li p {
+        color:#333;
+    }  
+    #main-content div.warning a{
+        color:#FF3333;
+    }              
+    /*
+    --------------------
+    3.4 Adjunct Styles 
+    CE has moved this to slq-global.css as the implementation here seemed to strict and limiting to me.  I have commented it out and left it here just in case removing creates unforeseen problems...
+    --------------------
+    */   
+
+    /*
+    #main-content div.adjunct {
+        margin: 10px 0;
+        background-color: #EEE;
+        padding: 10px;      
+    }      
+        #main-content div.adjunct h1,
+        #main-content div.adjunct h2,
+        #main-content div.adjunct h3,
+        #main-content div.adjunct h4,
+        #main-content div.adjunct h5,
+        #main-content div.adjunct h6,
+        #main-content div.adjunct p {
+            text-shadow: 1px 1px rgba(255,255,255,0.8); 
+        }
+    /*    
+    /*
+    --------------------
+    3.5 Editor Styles
+    --------------------
+    */    
+
+    #main-content .image-left {
+        float:left;
+        margin: 8px 10px 0px 0px;
+        background: url(http://www.slq.qld.gov.au/__data/assets/image/0020/219341/bg-grid-light.png) 0px 0px;
+    }
+    #main-content .image-right {
+        float:right;
+        margin: 8px 0px 0px 10px;
+        background: url(http://www.slq.qld.gov.au/__data/assets/image/0020/219341/bg-grid-light.png) 0px 0px;    
+    } 
+    #main-content .image-default, body.tablet #main-content .image-right, body.tablet #main-content .image-left{
+        float:none;
+        margin: 8px 0px 0px 0px;  
+    }
+    #main-content .image-centre {
+        float:none;
+        margin: 8px auto 0px auto;
+        clear: both;
+    }
+    #main-content .content.text .image-left p,
+    #main-content .content.text .image-right p {
+        margin: 0px;
+        padding: 0px 0px 0px 0px;
+        font-size: 90%; 
+    }
+    #main-content .image-left img,
+    #main-content .image-right img,
+    #main-content .image-default img,
+    #main-content .image-centre img {
+        border-top: 3px solid #00b1b0 !important; 
+        width: 100%;   /* Enable elastic images */
+        height: auto; 
+    } 
+    body.mobile #main-content .image-left,
+    body.mobile #main-content .image-right,
+    body.mobile #main-content .image-default,
+    body.mobile #main-content .image-centre {
+        float: none;
+        margin-left: 0px;
+        margin-right: 0px;
+        clear: both;
+    } 
+    #main-content .caption_div {
+        padding: 5px 10px 5px 10px;
+        font-size: 90%;
+        background: transparent url(http://www.slq.qld.gov.au/__data/assets/image/0020/219341/bg-grid-light.png) 0px 0px;
+    }
+    #main-content .float-left {
+        float:left;
+    }
+    #main-content .float-right {
+        float:right;       
+    }  
+    #main-content .text-bold {
+        font-weight: bold;
+    }
+    #main-content .text-italic {
+        font-style: italic;
+    }
+    #main-content .text-underline {
+        text-decoration: underline;
+    }     
+    
+    #main-content span.image-right img {
+        border-top: 3px solid #00B1B0 !important;
+        height: auto;
+        width: auto;
+        float:right;
+        margin: 4px 0px 0px 4px;
+        background: none !important;       
+        clear:both;
+    }
+
+    #main-content span.image-right {
+        float:right;
+        margin: 4px 0px 0px 4px;
+        background: none !important;       
+        clear:both;
+    }    
+
+    /*
+    --------------------
+    3.6 Search Styles
+    --------------------
+    */
+    #static_content,
+    #website_search,
+    #catalogue_search,
+    #whats-on_search,
+    #blog_search {
+      display: block;
+      width: 98%;
+      overflow: hidden;
+      margin: 10px 0;
+      float: left;
+      margin-bottom: 25px; /* RA 2016/03/01 */
+    }
+    .advanced-wrapper {
+      display: none;
+    }
+    #whats_on .advanced-wrapper {
+      display: block;
+    }
+    .whatson-advanced {
+      display: block;
+      overflow: hidden;
+    }
+    .whatson-advanced span {
+      float: left;
+      clear: both;
+      margin: 0 0 10px;
+      font-size: 90%;
+    }
+    .whatson-advanced label {
+      font-weight: bold;
+      margin: 0 5px 0 0;
+    }
+    #whats_on .whatson-advanced,
+    #whats_on input[type=submit] {
+      float: left;
+      clear: both;
+    }
+
+    /*
+    --------------------
+    3.7 Image Gallery Styles
+    --------------------
+    */
+    body.gallery #content,
+    body.gallery.mobile #content {
+        padding-top: 0px;
+        padding-bottom: 20px;
+        background-color: #FFFFFF;
+    }
+    #content .loader.gallery {
+        margin: 10px auto 10px auto;
+        width: 32px;
+        height: 32px;
+    }
+    #content .loader.gallery img {
+        display: block;
+    }
+    #content #gallery-type-2 {
+    /*    background: url(http://www.slq.qld.gov.au/__data/assets/image/0004/219343/bg-grid.png) repeat scroll 0 -10px #FFFFFF;   */
+        padding: 20px 0px 0px 0px;
+    }
+    #content #gallery-type-2 .caption, #content #gallery-type-3 .caption {
+        font-size: 90%;
+        padding: 5px 10px;
+    }
+    #gallery-type-3 .caption{
+        background: url("http://www.slq.qld.gov.au/__data/assets/image/0005/346028/bg-grid-light.png?v=0.1.1") repeat scroll 0 0 #F9F9F9;
+        width: 100% !important;
+    }
+    #content #gallery-type-2 .caption p, #content #gallery-type-3 .caption p {
+        display: block;
+        margin: 0px;
+    }
+    #content #gallery-type-2 .gallery-image {
+        background: #f9f9f9 url(http://www.slq.qld.gov.au/__data/assets/image/0020/219341/bg-grid-light.png) 0px 0px;
+        margin-bottom: 15px;
+    }
+    #content #gallery-type-2 .gallery-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    #content #gallery-type-3 {
+        padding: 0;
+    }
+        body.no-js #content #gallery-type-3 {
+            overflow: hidden;
+        }
+    #content #gallery-type-3 .gallery-image {
+        padding: 0 0 10px 0;
+        overflow: hidden;
+    }
+        body.no-js #content #gallery-type-3 .gallery-image {
+            width: 280px;
+            float: left;
+        }
+    #content #gallery-type-3 .gallery-image img {
+        display: block;
+        max-width: 280px;
+        width: 280px;
+        height: auto;
+    } 
+    body.tablet #content #gallery-type-3 {
+        padding: 0;
+    }
+    body.tablet #content #gallery-type-3 .gallery-image {
+    }
+        body.no-js.tablet #content #gallery-type-3 .gallery-image {
+            width: 320px;
+        }
+    body.tablet #content #gallery-type-3 .gallery-image img {
+        display: block;
+        max-width: 320px;
+        width: 320px;
+        height: auto;
+    }  
+
+    body.mobile #content #gallery-type-3 {
+        padding: 2px 0px 10px 10px;
+    }
+    body.mobile #content #gallery-type-3 .gallery-image {
+        margin: 0;
+        padding: 0px;
+        background: none;
+    }
+        body.no-js.tablet #content #gallery-type-3 .gallery-image {
+            width: 300px;
+        }
+    body.mobile #content #gallery-type-3 .gallery-image img {
+        display: block;
+        max-width: 300px;
+        width: 300px;
+        height: auto;
+    }
+
+    /*
+    --------------------
+    3.8 Video and Audio Gallery Styles
+    --------------------
+    */  
+
+    /* Video Gallery Type 2 - Desktop + Baseline Styles */
+    .video-container {
+        position:relative;
+        overflow:visible;
+        height:0;
+        padding-bottom:56.25%;
+    }
+
+    .video-container.sound-cloud-iframe {
+        padding-bottom: 166px;;
+    }
+
+    .video-container div,
+    .video-container object,
+    .video-container embed,
+    .video-container iframe  {
+        position:absolute !important;
+        /* Everything following breaks iPhone and iPad(!) */
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+    }
+    #video-gallery-type-2 {
+        padding: 10px 0px 0px 0px;
+        /*    background: #FFF url(http://www.slq.qld.gov.au/__data/assets/image/0004/219343/bg-grid.png) 0px 0px;    */
+        overflow: hidden;
+    }
+    #video-gallery-type-2 .video-wrapper {
+        width: 300px;
+        margin: 0px 10px 10px 0px;
+        float: left;
+        overflow: hidden;
+        display: block;
+    }
+    #video-gallery-type-2 .video-wrapper.pos-3,
+    #video-gallery-type-2 .video-wrapper.pos-6,
+    #video-gallery-type-2 .video-wrapper.pos-9,
+    #video-gallery-type-2 .video-wrapper.pos-12,
+    #video-gallery-type-2 .video-wrapper.pos-15,
+    #video-gallery-type-2 .video-wrapper.pos-18,
+    #video-gallery-type-2 .video-wrapper.pos-21 {
+        margin-right: 0px;
+    }
+    #video-gallery-type-2 .video-wrapper iframe,
+    #video-gallery-type-2 .video-wrapper embed,
+    #video-gallery-type-2 .video-wrapper object {
+        display: block;
+    }
+    #video-gallery-type-2 .video-wrapper .media-transcript {
+        height: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        font-size: 95%;
+        padding-top: 10px;
+        background: #ECECEC url(http://www.slq.qld.gov.au/__data/assets/image/0020/219341/bg-grid-light.png) 0px 0px;
+    }
+    #video-gallery-type-2 .video-wrapper .media-transcript.audio {
+        height: 346px;
+    }
+
+    /* Tablet Styles */
+    body.tablet #video-gallery-type-2 {
+        padding-top: 40px;
+    }
+    body.tablet #video-gallery-type-2 .video-wrapper {
+        margin: 0px 0px 40px 40px;
+    }
+
+    /* Mobile Styles */   
+    body.mobile #video-gallery-type-2 {
+        padding: 10px 0px 0px 10px
+    } 
+    body.mobile #video-gallery-type-2 .video-wrapper {
+        margin: 0px 0px 10px 0px;
+    }
+
+    /* Video Gallery Type 3 - Information Boxes */
+    body.gallery #main-content .inner {
+        width: auto;
+        padding: 20px 0px 20px 0;
+    }
+    body.gallery #main-content #information-boxes {
+        padding-left: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;  
+    }
+    body.gallery #main-content .information-box {
+        margin: 0px 0px 10px 10px;
+    }
+    body.gallery #main-content .information-box .inner {
+        padding: 0px 0px 0px 0px;
+    }
+    body.gallery #main-content .information-box a {
+        width: 130px;
+    }
+    body.gallery.tablet #main-content .information-box a {
+        width: 120px;
+    }
+
+    /* Desktop + Baseline Styles */
+    .media-transcript {
+        font-size: 95%;
+        padding: 10px 10px 10px 10px;
+        background: #ECECEC url(http://www.slq.qld.gov.au/__data/assets/image/0020/219341/bg-grid-light.png) 0px 0px;
+        overflow: hidden;
+    }
+    #main-content .media-transcript p {
+        line-height: 1.5em;
+    }
+    #main-content .media-transcript h2 {
+        font-size: 120%;
+    }
+    #main-content .media-transcript h3 {
+        font-size: 110%;
+    }
+    #main-content .media-transcript h4 {
+        font-size: 100%;
+    }
+    #main-content .media-transcript h2,
+    #main-content .media-transcript h3,
+    #main-content .media-transcript h4,
+    #main-content .media-transcript h5,
+    #main-content .media-transcript h6 {
+        margin-top: 0px;
+    }
+    .video-wrapper {
+        margin: 0px 0px 20px 0px;
+        overflow: hidden;
+        display: block;
+    }
+
+    /*
+    --------------------
+    3.9 Content Table Styles
+    --------------------
+    */
+    .content table {
+        background: #f6f6f6;
+        border-collapse: collapse;
+        color: #444;
+        font-weight: normal;
+        width: 100%;
+        padding: 0px;
+    }
+    body.mobile .content table {
+        padding: 0px 5px 0px 5px;
+    }
+    .content table td,
+    .content table th {
+        padding: 11px;
+        margin: 0px;
+        font-weight: normal;
+    }
+    body.tablet .content table td,
+    body.tablet .content table th {
+        padding: 5px;
+        margin: 0px;
+        font-weight: normal;
+    }
+    body.mobile .content table td,
+    body.mobile .content table th {
+        padding: 5px 10px 5px 10px;
+        margin: 0px;
+        font-weight: normal;
+    }
+    .content table th {
+        border-bottom: 1px solid #dbdbdb;
+        color: #666;
+        background: #e9e9e9;
+        text-shadow: 0px 1px #FFF;
+    }
+    .content table th p {
+        color: #666;
+        text-shadow: 0px 1px #FFF;
+    }
+    .content table tr {
+    }
+    .content table p,
+    body.tablet #content #main-content .inner table p,
+    body.mobile #content #main-content .inner table p {
+        text-align: left;
+        line-height: normal;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    /*
+    --------------------
+    3.10 Find a public library landing page
+    --------------------
+    */
+    
+    .branch-maps-wrapper .hiddenmarkerlist h3 {
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }    
+    .branch-maps-wrapper .hidden-search {
+      display: none;
+    }    
+    .branch-maps-wrapper .branch-library-popup p, 
+    .branch-maps-wrapper .branch-library-popup h3 {
+      line-height: 1em;
+      margin-top: 0;
+    } 
+    .branch-maps-wrapper .branch-library-popup li {
+      line-height: 1.2em;
+    } 
+    .branch-maps-wrapper #branch-locations {
+      width: 100%;
+      height: 500px;
+    } 
+    body.tablet .branch-maps-wrapper #branch-locations {
+      height: 360px;
+    }
+    body.mobile .branch-maps-wrapper #branch-locations {
+      height: 225px;
+    }    
+    #content .branch-maps-wrapper img {
+      max-width: none;
+    }    
+    .branch-maps-wrapper #map-checkbox-container { 
+      background: #e6e4f1;
+      padding: 15px 18px 15px 18px;
+      overflow: hidden;
+      border-top: 1px solid #FFF;
+      border-bottom: 1px solid #FFF; 
+      font-size: 1em; /* Added SAS 2013/09/02 */
+      font-weight: bold; /* Added SAS 2013/09/02 */
+    }
+    body.tablet .branch-maps-wrapper #map-checkbox-container {
+      padding: 0px;
+    }
+    body.mobile .branch-maps-wrapper #map-checkbox-container {
+      padding: 5px;
+    }
+    .branch-maps-wrapper .map-checkbox {
+      background: #e6e4f1;
+      padding: 3px;
+      width: auto;
+      float: left;
+      margin: 5px 3px 5px 0;
+      color: #000;
+    }
+    .branch-maps-wrapper .map-checkbox:hover {
+      cursor: pointer;
+    }
+    body.tablet .branch-maps-wrapper .map-checkbox {
+      margin: 0px;
+      padding: 8px 0px 0px 2px;
+      font-size: 0.8em;
+    }
+    body.tablet .branch-maps-wrapper .map-checkbox label {
+    padding: 1px 0px 0px 0px;
+    }
+    body.mobile .branch-maps-wrapper .map-checkbox {
+      float: none;
+      clear: both;
+      display: block;
+      margin: 0px;
+      padding: 0px;
+    }
+    .branch-maps-wrapper .reset-map {
+      float: right;
+      width: auto;
+      overflow: hidden;
+    }
+    .branch-maps-wrapper .reset-map .link-image {
+      display: none;
+    }
+    body.tablet .branch-maps-wrapper .reset-map .link-text {
+      display: none;
+    }
+    body.tablet .branch-maps-wrapper .reset-map .link-image {
+      display: block;
+    }
+    body.mobile .branch-maps-wrapper .reset-map .link-image {
+      display: none;
+    }
+    .branch-maps-wrapper .reset-map a {
+      color: #5a5483;
+      text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
+      text-decoration: underline;
+      background: url(http://www.slq.qld.gov.au/__data/assets/image/0004/346072/reset-map-icon.png?v=0.1.1) right center no-repeat;
+      display: block;
+      font-size: 1.1em;
+      padding: 3px 25px 3px 0;
+      margin: 5px 0px 5px 0px;
+    }
+    .branch-maps-wrapper .reset-map a:hover {
+    text-decoration: none;
+    color: #333;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
+    background: url(http://www.slq.qld.gov.au/__data/assets/image/0003/346071/reset-map-icon-hover.png?v=0.1.1) right center no-repeat;
+    }    
+    body.tablet .branch-maps-wrapper .reset-map a {
+      background: none;
+      padding: 0px;
+      margin: 0px;
+    }
+    .branch-maps-wrapper #branch-search-forms-container {
+      background-color: #8077ba;
+      color: #FFF;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+    body.mobile .branch-maps-wrapper #branch-search-forms-container {
+      margin-bottom: 10px;
+    }
+    .branch-maps-wrapper #branch-search-forms-container .geolocation {
+      float: left;
+      width: 49%;
+      overflow: hidden;
+      padding: 15px 0px 25px 0px;
+    }
+    body.tablet .branch-maps-wrapper #branch-search-forms-container .geolocation {
+      float: none;
+      width: 100%;
+    }
+    body.mobile .branch-maps-wrapper #branch-search-forms-container .geolocation {
+      float: none;
+      width: 100%;
+    }
+    body .branch-maps-wrapper #branch-search-forms-container .geolocation p.geolocation-notice {
+        color: #FFF; 
+        line-height: 1.3; 
+        margin-top: 25px; 
+        margin-left: 33px;
+    } /* Added SAS 2013/09/19 */
+    body.mobile .branch-maps-wrapper #branch-search-forms-container .geolocation p.geolocation-notice {
+        margin-left: 0px; 
+    } /* Added SAS 2013/09/19 */    
+    .branch-maps-wrapper #use-current-location #find-local-button {
+      background: #8077ba url(http://www.slq.qld.gov.au/__data/assets/image/0004/346036/find-services-icon.png?v=0.1.1) right 10px no-repeat;
+      border: none;
+      padding: 10px 45px 10px 0px;
+      color: #FFF;
+      font-size: 1.8em;
+      font-weight: bold;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      clear: both;
+      display: block;
+      margin-left: 30px;
+      text-decoration: underline;
+    }
+    .branch-maps-wrapper #use-current-location #find-local-button:hover {     
+        color: #FFF;
+        text-shadow: 1px 1px rgba(100, 100, 100, 0.4);
+        text-decoration: none;
+    }
+    body.mobile .branch-maps-wrapper #use-current-location #find-local-button {
+      margin-left: 5px;
+    }
+    .branch-maps-wrapper #use-current-location label {
+      margin-left: 33px;
+    }
+    body.mobile .branch-maps-wrapper #use-current-location label {
+      margin-left: 10px;
+    }
+    .branch-maps-wrapper #branch-search-forms-container .search-map {
+      border-left: 1px solid #9992c8;
+      overflow: hidden;
+      float: right;
+      width: 50%;
+      padding: 17px 0 25px;
+    }
+    body.tablet .branch-maps-wrapper #branch-search-forms-container .search-map,
+    body.mobile .branch-maps-wrapper #branch-search-forms-container .search-map {
+      float: none;
+      width: 100%; 
+      border-top: 1px solid #9992c8;
+    }
+    .branch-maps-wrapper #branch-search-forms-container .search-map h2 {
+      padding: 10px 0px 11px 20px;
+      color: #FFF;
+      font-size: 1.8em;
+      font-weight: bold;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+      margin: 0px;
+    }
+    body.tablet .branch-maps-wrapper #branch-search-forms-container .search-map h2 {
+      padding-left: 30px;
+    }
+    body.mobile .branch-maps-wrapper #branch-search-forms-container .search-map h2 {
+      padding: 0px 0px 10px 10px;
+    }
+    .branch-maps-wrapper #branch-search-forms-container .search-map label {
+      margin: 0px 10px 0px 20px;
+    }
+    body.tablet .branch-maps-wrapper #branch-search-forms-container .search-map label {
+      margin: 0px;
+      display: block;
+    }
+    body.mobile .branch-maps-wrapper #branch-search-forms-container .search-map label {
+      margin: 0px 10px 0px 10px;
+      display: block;
+    }
+    .branch-maps-wrapper #branch-search-forms-container .search-map #postcodeLocation {
+      border: none;
+      padding: 6px;
+      width: 100px;
+      margin-right: 10px;
+    }
+    body.tablet .branch-maps-wrapper #branch-search-forms-container .search-map #postcodeLocation {
+      width: 70px;
+    }
+    body.mobile .branch-maps-wrapper #branch-search-forms-container .search-map #postcodeLocation {
+      width: 100px;
+      margin: 0px 10px;
+    }
+    .branch-maps-wrapper #branch-search-forms-container .search-map #suburbLocation {
+      border: none;
+      padding: 6px;
+      width: 112px;
+      margin-right: 10px;
+    }
+    body.mobile .branch-maps-wrapper #branch-search-forms-container .search-map #suburbLocation {
+      margin: 0px 10px;
+    }
+    .branch-maps-wrapper #branch-search-forms-container .search-map #map-postcode-search {
+      padding-bottom: 20px;
+    }
+    body.tablet .branch-maps-wrapper #branch-search-forms-container .search-map #map-postcode-search {
+      float: left;
+      margin-left: 30px;
+      overflow: hidden;
+      width: 42.5%;
+    }
+    body.tablet .branch-maps-wrapper #branch-search-forms-container .search-map #map-suburb-search {
+      width: 50%;
+      float: left;
+      overflow: hidden;
+    }
+    .branch-maps-wrapper #branch-search-forms-container .search-map #suburbSubmit,
+    .branch-maps-wrapper #branch-search-forms-container .search-map #postcodeSubmit {
+      font-size: 0.9em;
+    }
+    body.mobile .branch-maps-wrapper .intro-text-slq { 
+        padding: 10px; 
+    } /* Added SAS for NCR 2013/09/23 */     
+    .branch-maps-wrapper .search-site-wrapper {
+      background: #ebebeb;
+      padding: 25px 20px 25px 20px; 
+      margin-top: 50px;
+      overflow: hidden;
+    }
+    body.mobile .branch-maps-wrapper .search-site-wrapper {
+      margin: 0px 0px 10px 0px;
+      padding: 20px 10px;
+    }
+    .branch-maps-wrapper .search-site-wrapper label {
+      color: #464646;
+      font-size: 1.7em;
+      margin: 0px 0px 15px 0px;
+      display: block;
+    }
+    body.mobile #main-content .inner .branch-maps-wrapper .search-site-wrapper p {
+      margin: 0px;
+      padding: 0px;
+    }
+    .branch-maps-wrapper .search-site-wrapper #queries_libraries_fields_query {
+      border: none;
+      padding: 6px;
+      width: 420px;
+      margin-right: 15px;
+    }
+    body.tablet .branch-maps-wrapper .search-site-wrapper #queries_libraries_fields_query {
+      width: 365px;
+      margin-right: 18px;
+    }
+    body.mobile .branch-maps-wrapper .search-site-wrapper #queries_libraries_fields_query {
+      margin: 0px 0px 10px 0px;
+      width: 287px;
+      max-width: 287px;
+      display: block;
+      clear: both;
+    }
+    .branch-maps-wrapper .search-site-wrapper .submit-button {
+      display: inline;
+    }
+    body.mobile .branch-maps-wrapper .search-site-wrapper .submit-button {
+      display: block;
+      float: right;
+      overflow: hidden;
+    }
+    .branch-maps-wrapper .clear {
+      clear: both;
+    }
+        
+        /*
+        --------------------
+        3.10.1 Individual library branch page
+        --------------------
+        */        
+        #content .single-branch-wrapper img {
+          max-width: none;
+        }        
+        .single-branch-wrapper #branch-location {
+          width: 100%;
+          height: 500px;
+        }        
+        body.tablet .single-branch-wrapper #branch-location {
+          width: 100%;
+          height: 400px;
+        }        
+        body.mobile .single-branch-wrapper #branch-location {
+          width: 95%; 
+          margin: 5px auto; 
+          height: 250px;
+        }        
+        .single-branch-wrapper .clear {
+          clear: both;
+        }        
+        .single-branch-wrapper .geolocation-notice { 
+            clear: right; 
+            float: right; 
+            font-size: 0.75em; 
+            margin-top: 0px; 
+            width: 40%; 
+        } /*Added SAS 2013/09/19 */
+        body.mobile .single-branch-wrapper .geolocation-notice { 
+            clear: none; 
+            float: none; 
+            margin-top: 10px;  
+            margin-right: 10px; 
+            padding: 0px 10px; 
+            text-align: left; 
+            width: auto;
+        } /* Added SAS 2013/09/19 */
+        .single-branch-wrapper #directionsPanel { 
+            clear: both; 
+            width: auto; 
+        }  /* Added SAS 2013/09/19 */
+        body.mobile .single-branch-wrapper #directionsPanel { 
+            margin: 0px auto !important; 
+            width: 90% !important; 
+        }  /* Added SAS 2013/09/19 */ 
+        
+        /* Following section added SAS 2013/10/24 */        
+        .search-site-wrapper {
+            background: #ebebeb;
+            padding: 25px 20px; 
+            margin-top: 50px;
+            overflow: hidden;
+        }
+        body.mobile .search-site-wrapper {
+            margin: 10px 0px;
+            padding: 20px 10px;
+        }
+        .search-site-wrapper label {
+            color: #464646;
+            font-size: 1.2em;
+            margin: 0px 0px 15px 0px;
+            display: block;
+        }
+        body.mobile #main-content .inner .search-site-wrapper p {
+            margin: 0px;
+            padding: 0px;
+        }
+        .search-site-wrapper #queries_libraries_fields_query {
+            border: none;
+            padding: 6px;
+            width: 420px;
+            margin-right: 15px;
+        }
+        body.tablet .search-site-wrapper #queries_libraries_fields_query {
+
+            width: 365px;
+            margin-right: 18px;
+        }
+        body.mobile .search-site-wrapper #queries_libraries_fields_query {
+            margin: 0px 0px 10px 0px;
+            width: 287px;
+            max-width: 287px;
+            display: block;
+            clear: both;
+        }
+        .search-site-wrapper input { 
+            padding: 6px; 
+        }
+        .search-site-wrapper .submit-button {
+            display: inline;
+        }
+        .search-site-wrapper .hidden-search {
+            display: none;
+        } 
+        body.mobile .search-site-wrapper .submit-button {
+            display: block;
+            float: right;
+            overflow: hidden;
+        }
+        body.mobile form#search_page_246194 ul { 
+            margin: 10px; 
+        }
+        #directory-search-results .search-site-wrapper label, #directory-search-no-results .search-site-wrapper label, #directory-search-on-services label, #directory-search-on-service-folder label, #directory-search-on-branches label, #directory-search-on-branch-folder label, #directory-search-on-branches-folder label, #directory-search-on-ikcs label { 
+            font-size: 1.6em;             
+        }        
+        /* End section added SAS 2013/10/24 */
+        
+        .lib_branch_hours_container { margin-top: 25px; } /* Added SAS 2013/11/26 */     
+        .library-branch-image { margin: 0px; padding: 0px; } /* Added SAS 2013/11/26 */
+        body.mobile #content .library-branch-image { clear: both; float: none; } /* Added SAS 2013/11/26 */        
+
+/*
+--------------------
+X. Responsive Elements
+--------------------
+*/
+
+/*
+body.desktop #main-content img,
+body.desktop #main-content .image-left,
+body.desktop #main-content .image-right,
+body.desktop #main-content .image-centre,
+body.desktop #main-content .image-default,
+body.desktop #main-content .image-left,
+body.desktop #main-content .image_div {
+max-width:730px;
+height:auto;
+}
+
+body.tablet #main-content img,
+body.tablet #main-content .image-left,
+body.tablet #main-content .image-right,
+body.tablet #main-content .image-centre,
+body.tablet #main-content .image-default,
+body.tablet #main-content .image-left,
+body.tablet #main-content .image_div {
+max-width:530px;
+height:auto;
+}
+
+
+body.mobile #main-content img,
+body.mobile #main-content .image-left,
+body.mobile #main-content .image-right,
+body.mobile #main-content .image-centre,
+body.mobile #main-content .image-default,
+body.mobile #main-content .image-left,
+body.mobile #main-content .image_div {
+max-width:320px;
+height:auto;
+}
+*/
+
+/*
+--------------------
+X.2 Tablet Design - max width 768px
+--------------------
+*/    
+
+body.tablet #container-wrapper .slq-logo.site-icon,
+body.tablet #container-wrapper .slq-logo.site-icon img {
+    width: 45px;
+    height: 41px;
+    /* top: 26px; */
+}
+/*add fix for utilities icon disappearing on tablet landscape view*/
+body.tablet #tab-background{width:550px}
+
+
+    /*
+    --------------------
+    X.2.1 Layout for Tablet Portrait Tablet
+    --------------------
+    */        
+        
+    body.tablet #container-wrapper {
+        max-width: 768px; /* Wider to support SLQ speech bubble */
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+    body.tablet #container {
+        position: relative;
+        float: right;
+        width: 720px;
+    }
+    body.tablet #site-top,
+    body.tablet #header,
+    body.tablet #footer,
+    body.tablet #breadcrumb,
+    body.tablet .float-wrapper
+        {
+        display: block;
+        position: relative;
+        max-width: 720px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+    }
+    body.tablet #breadcrumb .inner
+        {
+        display: block;
+        position: relative;
+        width: 100%;
+        z-index: 3;
+    }
+    body.tablet .float-wrapper .column-right {
+        width: 170px;
+        float: right;
+        position: relative;
+    }
+    body.tablet .float-wrapper .column-left {
+
+        width: 550px;
+        float: left;
+        position: relative;
+    }
+                
+    /*
+    --------------------
+    X.2.2 Header Search Form for Tablet Portrait
+    --------------------
+    */
+    body.tablet #header #header-pan-search div.input {
+    /*    width: 270px; */
+    }    
+    body.tablet #header #header-pan-search #query {
+        font-size: 100%;
+        margin-top: 10px;
+    } 
+    body.tablet #header #header-pan-search .filter-controls #events-search-option,
+    body.tablet #header #header-pan-search .filter-controls #blogs-search-option {
+        display: none;
+    }
+    body.tablet #header #header-pan-search .filter-controls #more-search-option {
+        display: block;
+    }
+    body.tablet #header #header-pan-search .filter-controls {
+        font-size: 95%;
+    /*  padding: 10px 14px 0 0;  */
+    }
+    body.tablet #header #header-pan-search .submit-button input {
+    /*    width: 70px;   */
+        height: 40px;
+    }
+    body.tablet #header #header-pan-search .submit-button {
+        width: 70px;
+        height: 40px;            
+    }
+    body.tablet #header #header-pan-search .submit-button.desktop {
+        display: none;
+    }
+    body.tablet #header #header-pan-search .submit-button.tablet {
+        display: block;
+    }
+        
+    /*
+    --------------------
+    X.2.3 Drop down sizes for Tablet Portrait
+    --------------------
+    */   
+    body.tablet #menu a {
+        font-size: 75%;
+        padding-top: 14px;
+    }     
+    body.tablet .menu-item.treasures {
+        left: 0px;
+    }
+        body.tablet .menu-item.treasures .sub-menu {
+            left: 0px;
+            width: 720px;
+        }
+    body.tablet .menu-item.services  {
+        left: 84px;
+    }
+        body.tablet .menu-item.services .sub-menu {
+            left: -84px;
+            width: 720px;
+        }
+    body.tablet .menu-item.whats-on {
+        left: 158px;
+    }
+        body.tablet .menu-item.whats-on .sub-menu {
+            left: -158px;
+            width: 720px;                   
+        }
+    body.tablet .menu-item.resources {
+        left: 241px;
+    }
+        body.tablet .menu-item.resources .sub-menu {
+            left: -241px;
+            width: 720px;                
+        }
+    body.tablet .menu-item.aboutus {
+        left: 329px;
+    }
+        body.tablet .menu-item.aboutus .sub-menu {
+            left: -329px;
+            width: 720px;
+        }
+    body.tablet .menu-item.audioandvideo {
+        left: 405px;
+    }
+        body.tablet .menu-item.audioandvideo .sub-menu {
+            left: -405px;
+            width: 720px;               
+        }
+              
+    /*
+    --------------------
+    X.2.4 Inside Navigation for Tablet Portrait
+    --------------------
+    */          
+    body.tablet .inside-navigation-list li a {
+        font-size: 75%;
+        padding: 13px 12px 12px 12px;
+    }
+        
+    body.tablet .inside-navigation-list {
+        overflow: hidden;
+        width: 720px;
+    }
+        
+    /*
+    --------------------
+    X.2.5 Inside Content Slider for Tablet Portrait
+    --------------------
+    */
+    body.tablet #main-content #content-slider-container {
+        width: 290px;
+    }        
+    body.tablet #main-content #content-slider-container #content-slider-content,
+    body.tablet #main-content #content-slider-content .content-tab,
+    body.tablet #main-content #content-slider-container #content-slider-content img {
+        width: 290px;
+        height: 188px;
+    }
+    body.tablet #main-content #content-slider-container #content-slider-nav {
+        top: 165px;
+    }
+    
+    body.tablet.home #content {
+        background: url(http://www.slq.qld.gov.au/__data/assets/image/0004/219343/bg-grid.png) repeat scroll 0 0 #FFFFFF;
+        padding: 0px 0px 40px 0px;
+    }    
+    
+    body.tablet.home #content .box {
+        margin: 40px 0px 0px 40px;
+    }
+    body.tablet .home #content .box .feature-box {
+        margin: 0px 0px 0px 0px;
+    }    
+
+/*
+--------------------
+X.3 Smartphone Design - max width 320px
+--------------------
+*/     
+body.mobile {
+    background: url(http://www.slq.qld.gov.au/__data/assets/image/0003/219342/bg-grid-mobile-bg.png) repeat scroll 0 0 #2C2C2C;
+    -webkit-text-size-adjust: 100%;
+}
+/* Hide elements from mobile view */
+body.mobile #container-wrapper .slq-logo.desktop,
+body.mobile #container-wrapper .slq-logo.tablet,
+body.mobile #header,
+body.mobile #tab-background {
+    display: none !important;
+}
+
+
+    /*
+    --------------------
+    X.3.1 Layout for Smartphone
+    --------------------
+    */    
+    body.mobile #container-wrapper {
+        width: 320px;
+    }
+    body.mobile #container {
+        position: relative;
+        float: none;
+        width: 320px;
+    }
+    body.mobile #site-top,
+    body.mobile #header,
+    body.mobile #footer,
+    body.mobile #breadcrumb,
+    body.mobile .float-wrapper
+        {
+        display: block;
+        position: relative;
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+    }
+    body.mobile #breadcrumb .inner
+        {
+        display: block;
+        position: relative;
+        width: 100%;
+        z-index: 3;
+    }
+    body.mobile .float-wrapper .column-right {
+        width: 320px;
+        float: none;
+        position: relative;
+    }
+    body.mobile .float-wrapper .column-left {
+        width: 320px;
+        float: none;
+        position: relative;
+    }
+    
+    /*
+    --------------------
+    X.3.2 Mobile Content
+    --------------------
+    */
+    body.mobile #content {
+        background: #FFF;
+    }
+    body.mobile #main-content .inner {
+        padding: 10px 0px;
+    }
+    body.mobile #main-content .inner p,
+    body.mobile #main-content .inner h1,
+    body.mobile #main-content .inner h2,
+    body.mobile #main-content .inner h3,
+    body.mobile #main-content .inner h4,
+    body.mobile #main-content .inner h5,
+    body.mobile #main-content .inner h6 {
+        padding: 0px 10px 0px 10px;
+    }
+    body.mobile #main-content .inner h1 {
+        color: #009999;
+        font-weight: bold;
+        font-size: 130%;
+    }   
+    body.mobile #main-content .inner hr {
+        margin: 0px 10px 13px 10px;
+    }
+    body.mobile #main-content #content-slider-container {
+        width: 320px;
+        margin-bottom: 10px
+
+    }        
+    body.mobile #main-content #content-slider-container #content-slider-content,
+    body.mobile #main-content #content-slider-content .content-tab,
+    body.mobile #main-content #content-slider-container #content-slider-content img {
+        width: 320px;
+        height: 207px;
+    }
+    body.mobile #main-content #content-slider-container #content-slider-nav {
+        top: 185px;
+    }  
+
+    body.mobile.home #content {
+        background: url(http://www.slq.qld.gov.au/__data/assets/image/0004/219343/bg-grid.png) repeat scroll 0 0 #FFFFFF;
+        padding: 0px 10px 10px 10px;
+    }    
+    
+    body.mobile.home.home #content .box {
+        margin: 10px 0px 0px 0px;
+    }
+    body.mobile.home #content .box .feature-box {
+    }
+      
+    /*
+    --------------------
+    X.3.3 Mobile Footer
+    --------------------
+    */
+    body.mobile #footer h3 {
+        font-size: 70%;
+    }
+    body.mobile #fat-footer .section {
+        width: 130px;
+        margin-right: 10px;
+    }
+    body.mobile #footer .column-right .feature {
+        padding: 8px 14px 8px 14px;
+    }    
+    body.mobile #footer .feature.aqua.cc-logo {
+        background: #00B1B0 url(http://www.slq.qld.gov.au/__data/assets/image/0005/219344/cc-logo-mobile.jpg) 288px 7px no-repeat;
+    }
+    
+    /*
+    --------------------
+    X.3.4 Main Navigation for Smartphone
+    --------------------
+    */
+    
+    body.mobile #nav-link-215324,
+    body.mobile #nav-link-215391,
+    body.mobile #nav-link-215433,
+    body.mobile #nav-link-215489,
+    body.mobile #nav-link-215593,
+    body.mobile #nav-link-215602,
+    body.mobile #nav-link-215606,
+    body.mobile #nav-link-215662,
+        body.mobile #nav-link-224850{
+        left: 0px;
+
+    }
+    
+    body.mobile #nav-link-215324 .sub-menu,
+    body.mobile #nav-link-215433 .sub-menu,
+    body.mobile #nav-link-215489 .sub-menu,
+    body.mobile #nav-link-215593 .sub-menu,
+    body.mobile #nav-link-215602 .sub-menu,
+    body.mobile #nav-link-215606 .sub-menu,
+    body.mobile #nav-link-215662 .sub-menu,
+        body.mobile #nav-link-224850 .sub-menu {
+        left: 0px;
+        width: auto;
+    }
+
+    body.mobile #navigation.float-wrapper {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+        overflow: visible;
+        top: 0px;
+
+    }
+    #tabs {
+        position: relative;
+    }
+    body.mobile #menu a {
+        color: #FFF;
+        display: inline-block;
+        padding: 12px 8px 12px 8px;
+        font-size: 75%;
+    }
+    body.mobile #menu a:hover,
+    body.mobile #menu a:focus {
+        color: #FFF;
+        text-decoration: underline;
+    }
+    body.mobile #menu a.hier {
+        color: #FFF;
+        text-decoration: underline;
+        background: transparent;
+    }
+    body.mobile #menu a.current {
+        color: #75E4FF;
+        text-decoration: underline;
+        background: transparent;
+    } 
+    body.mobile .sub-menu {
+      display: none;
+    }
+    body.mobile .sub-item {
+        display: block;
+        float: left;
+        height: 40px;
+        z-index: 100;
+        position: relative;
+    }
+        body.mobile #menu .menu-item .sub-item a {
+            display: block;
+            float: left;
+            color: #00313C;
+            text-shadow: 1px 1px rgba(255, 255, 255, 0.4);
+            text-decoration: none;            
+        }
+        body.mobile #menu .menu-item .sub-item a:hover,
+        body.mobile #menu .menu-item .sub-item a:focus {
+            color: #FFF;
+            text-shadow: 1px 1px rgba(100, 100, 100, 0.4);
+            text-decoration: underline;
+        }
+        body.mobile #menu .menu-item .sub-item:hover {
+            
+        } 
+
+    body.mobile #menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      width: auto;
+      position: relative;
+      overflow: hidden;
+      z-index: 100;
+      background: #3e3e3e url(http://www.slq.qld.gov.au/__data/assets/image/0006/219363/mobile-nav-level-one-bg.png) bottom left repeat-x;
+    }
+    body.mobile .menu-item {
+      position: relative;
+      display: block;
+      background: #3e3e3e url(http://www.slq.qld.gov.au/__data/assets/image/0006/219363/mobile-nav-level-one-bg.png) top left repeat-x;
+      float: left;
+    }
+        body.mobile .menu-item a {
+            background: transparent;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.4);       
+        }
+    body.mobile .menu-item:hover, body.mobile .menu-item:hover a { text-decoration: underline;}
+    body.mobile .menu-item:hover a {
+        background: transparent;
+    }
+    body.mobile.no-js  #navigation .menu-item:hover .sub-menu { display: inline-block; position: relative; z-index: 100; }
+    
+    body.mobile .mobile-strip {
+        display: block;
+        height: 2px;
+        background: #fcbe1d url(http://www.slq.qld.gov.au/__data/assets/image/0004/219361/mobile-nav-dropdown-stripe.png) 0px 0px repeat-x;
+    }
+    body.mobile .mobile-strip.border-bottom {
+        border-bottom: 1px solid #2b2b2b;
+    }   
+    
+    /*
+    --------------------
+    X.3.5 Inside Navigation for Smartphone
+    --------------------
+    */
+    body.mobile #inside-navigation {
+        /*
+        opacity: 0.6;
+        */
+        position: relative;
+    }
+    body.mobile .inside-navigation-list,
+    body.mobile .inside-navigation-list li {
+        list-style: none;        
+    }
+    body.mobile .inside-navigation-list {
+        overflow: hidden;
+
+        width: 100%;
+        height: auto;
+    }
+    body.mobile .inside-navigation-list li {
+        display: block;
+        height: 40px;
+        float: left;
+    }
+
+    body.mobile .inside-navigation-list li a {
+        color: #FFF;
+        display: block;
+        float: left;
+        padding: 13px 8px 12px 8px;
+        font-size: 75%;
+        white-space: nowrap;
+    }  
+    body.mobile .inside-navigation-list li a:hover,
+    body.mobile .inside-navigation-list li a:focus,
+    body.mobile .inside-navigation-list li a.hier:hover,
+    body.mobile .inside-navigation-list li a.current:hover,
+    body.mobile .inside-navigation-list li a.hier:focus,
+    body.mobile .inside-navigation-list li a.current:focus {
+        text-decoration: underline;
+        color: #FFF;
+        text-shadow: 1px 1px rgba(100, 100, 100, 0.4); 
+    }      
+    body.mobile .inside-navigation-list li a.hier {
+        text-decoration: underline;
+        color: #FFF;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.4);  
+    }
+    body.mobile .inside-navigation-list li a.current {
+        text-decoration: underline;
+        color: #FFF;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.4);             
+    }
+
+    /* ========= Rely upon base desktop styles =========
+    body.mobile .inside-navigation-list.eighth-level, 
+    body.mobile .inside-navigation-list.eighth-level li, 
+    body.mobile .inside-navigation-list.eighth-level a {
+        background: #d05981 url(http://www.slq.qld.gov.au/__data/assets/image/0004/221368/nav-level-eight-bg.png) bottom left repeat-x;
+        color: #331620;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.4); 
+    }
+        body.mobile .inside-navigation-list.eighth-level li, 
+        body.mobile .inside-navigation-list.eighth-level a {
+            background-position: 0px 0px; 
+        }
+
+    body.mobile .inside-navigation-list.seventh-level, 
+    body.mobile .inside-navigation-list.seventh-level li, 
+    body.mobile .inside-navigation-list.seventh-level a {
+        background: #d05981 url(http://www.slq.qld.gov.au/__data/assets/image/0017/221372/nav-level-seven-bg.png) bottom left repeat-x;
+        color: #331620;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.4); 
+    }
+        body.mobile .inside-navigation-list.seventh-level li, 
+        body.mobile .inside-navigation-list.seventh-level a {
+            background-position: 0px 0px; 
+        }
+
+    body.mobile .inside-navigation-list.sixth-level, 
+    body.mobile .inside-navigation-list.sixth-level li, 
+    body.mobile .inside-navigation-list.sixth-level a {
+        background: #d05981 url(http://www.slq.qld.gov.au/__data/assets/image/0018/221373/nav-level-six-bg.png) bottom left repeat-x;
+        color: #331620;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.4); 
+    }
+        body.mobile .inside-navigation-list.sixth-level li, 
+        body.mobile .inside-navigation-list.sixth-level a {
+            background-position: 0px 0px; 
+        }
+
+    body.mobile .inside-navigation-list.fifth-level, 
+    body.mobile .inside-navigation-list.fifth-level li, 
+    body.mobile .inside-navigation-list.fifth-level a {
+        background: #d05981 url(http://www.slq.qld.gov.au/__data/assets/image/0005/221369/nav-level-five-bg.png) bottom left repeat-x;
+        color: #331620;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.4); 
+    }
+        body.mobile .inside-navigation-list.fifth-level li, 
+        body.mobile .inside-navigation-list.fifth-level a {
+            background-position: 0px 0px; 
+        }
+
+    body.mobile .inside-navigation-list.fourth-level, 
+    body.mobile .inside-navigation-list.fourth-level li, 
+    body.mobile .inside-navigation-list.fourth-level a {
+        background: #d05981 url(http://www.slq.qld.gov.au/__data/assets/image/0015/221370/nav-level-four-bg.png) bottom left repeat-x;
+        color: #331620;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.4); 
+    }
+        body.mobile .inside-navigation-list.fourth-level li, 
+        body.mobile .inside-navigation-list.fourth-level a {
+            background-position: 0px 0px; 
+        }
+    body.mobile .inside-navigation-list.third-level, 
+    body.mobile .inside-navigation-list.third-level li, 
+    body.mobile .inside-navigation-list.third-level a  {
+        background: #8676b7 url(http://www.slq.qld.gov.au/__data/assets/image/0019/221374/nav-level-three-bg.png) bottom left repeat-x;
+        color: #201b2b;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.4);           
+    }  
+        body.mobile .inside-navigation-list.third-level li, body.mobile .inside-navigation-list.third-level a {
+            background-position: 0px 0px;    
+        }
+    body.mobile .inside-navigation-list.second-level, 
+    body.mobile .inside-navigation-list.second-level li, 
+    body.mobile .inside-navigation-list.second-level a {
+        background: #3C3C3C url(http://www.slq.qld.gov.au/__data/assets/image/0020/221375/nav-level-two-bg.png) bottom left repeat-x;
+        color: #00313C;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.4);           
+    }     
+        body.mobile .inside-navigation-list.second-level li, body.mobile .inside-navigation-list.second-level a {
+            background-position: 0px 0px;          
+        } 
+
+    body.mobile .inside-navigation-list.first-level, 
+    body.mobile .inside-navigation-list.first-level li, 
+    body.mobile .inside-navigation-list.first-level a {
+        background: #3C3C3C url(http://www.slq.qld.gov.au/__data/assets/image/0016/221371/nav-level-one-bg.png) bottom left repeat-x;
+        color: #00313C;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.4);           
+    }     
+        body.mobile .inside-navigation-list.second-level li, body.mobile .inside-navigation-list.second-level a {
+            background-position: 0px 0px;          
+        }
+    ========= */
+
+    /*
+    --------------------
+    X.3.6 Site top for Smartphone
+    --------------------
+    */    
+    body.mobile #site-top {
+        background: #3d3d3d url(http://www.slq.qld.gov.au/__data/assets/image/0010/219358/mobile-header-bg.png) 0px 0px;
+        min-height: 36px;
+    }
+    body.mobile #container-wrapper #site-top .slq-logo.mobile {
+        display: block;
+    }
+    body.mobile #container-wrapper #site-top .slq-logo.mobile img {
+        position: relative;
+        top: 0px;
+        left: 2px;
+        /*set specific width and height to resize hi-res logo (native dimensions for this logo is: 367 x 122 at 326ppi)*/
+        width: 81px;
+        height: 27px;
+    }
+    body.mobile #site-strip {
+        width: 160px;
+        min-height: 36px;
+        position: absolute;
+        left: 160px;
+        /*Remove colour bars*/
+        display:none
+    }
+    body.mobile #site-top .site-alert {
+        margin: 36px 0px 0px 0px;
+    }
+
+    /*
+    --------------------
+    X.3.7 Mobile Tabs
+    --------------------
+    */        
+    body.mobile #mobile-tabs {
+        display: block;
+        background: #FFF;
+    }    
+        body.mobile #mobile-tabs h1 {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 80%;
+            text-shadow: 1px 1px rgba(255,255,255,0.8);
+            background: #d6d6d6 url(http://www.slq.qld.gov.au/__data/assets/image/0010/219367/mobile-quick-tabs-sprite.png) 0px 0px;
+            padding: 13px 0px 11px 52px;
+            border-top: 1px solid #FFF;
+            cursor: pointer;
+        }
+            /* Default */
+            body.mobile #mobile-tabs h1.opening_hours {
+                background-position: 0px 0px;
+                color: #009fc3;
+            }
+            body.mobile #mobile-tabs h1.locations {
+                background-position: 0px -43px;
+                color: #f58023;
+            }
+            body.mobile #mobile-tabs h1.contact_us {
+                background-position: 0px -86px;
+                color: #a4be00;
+            }
+            body.mobile #mobile-tabs h1.search {
+                background-position: 0px -129px;
+                color: #8078b8;
+            }
+                body.mobile #mobile-tabs h1.search a {
+                    color: #8078b8;
+                    display: block;
+                }
+            body.mobile #mobile-tabs h1.whats_on {
+                background-position: 0px -172px;
+                color: #ed174f;
+            }
+                body.mobile #mobile-tabs h1.whats_on a {
+                    color: #ed174f;
+                    display: block;
+                }
+            
+            /* Hover */
+            body.mobile #mobile-tabs h1.opening_hours:hover {
+                background-position: 0px -215px;
+            }
+            body.mobile #mobile-tabs h1.locations:hover {
+                background-position: 0px -258px;
+            }
+            body.mobile #mobile-tabs h1.contact_us:hover {
+                background-position: 0px -301px;
+            }
+            body.mobile #mobile-tabs h1.search:hover {
+                background-position: 0px -344px;
+            }
+            body.mobile #mobile-tabs h1.whats_on:hover {
+                background-position: 0px -387px;
+            }    
+            
+            /* Current */
+            body.mobile #mobile-tabs h1.opening_hours.active {
+                background-position: 0px -430px;
+            }
+            body.mobile #mobile-tabs h1.locations.active {
+                background-position: 0px -473px;
+            }
+            body.mobile #mobile-tabs h1.contact_us.active {
+                background-position: 0px -516px;
+            }
+            body.mobile #mobile-tabs h1.search.active {
+                background-position: 0px -559px;
+            }
+            body.mobile #mobile-tabs h1.whats_on.active {
+                background-position: 0px -602px;
+            }  
+                               
+        body.mobile #mobile-tabs .tab-content {
+            background: #008faf url(http://www.slq.qld.gov.au/__data/assets/image/0009/219366/mobile-quick-tabs-bg-sprite.jpg) 0px 0px repeat-x;
+            height: 240px;
+            display:none;
+        }
+        body.mobile #mobile-tabs .tab-content .inner {
+            padding: 10px;
+            font-size: 70%;
+            /*Altered the font size here because opening hours was overlapping the base of its container*/
+            /*font-size: 75%;*/
+            overflow: hidden;
+        }
+            body.mobile #mobile-tabs .tab-content .inner .column-left {
+            width: 145px;
+            padding: 0px 10px 0px 0px;
+            float: left;
+            }
+            body.mobile #mobile-tabs .tab-content .inner .column-right {
+            float: right;
+            width: 145px;
+            }
+        body.mobile #mobile-tabs .tab-content .inner p {
+            color: #FFF;
+            text-shadow: 1px 1px rgba(0,0,0,0.4);
+            padding-bottom: 3px;
+            margin-bottom: 0px;
+        }
+        body.mobile #mobile-tabs .tab-content .inner p b,
+        body.mobile #mobile-tabs .tab-content .inner p strong {
+            color: #FFF;
+        }  
+            body.mobile #mobile-tabs .tab-content.opening_hours {
+                background: #008faf url(http://www.slq.qld.gov.au/__data/assets/image/0009/219366/mobile-quick-tabs-bg-sprite.jpg) 0px 0px repeat-x;
+            }
+            body.mobile #mobile-tabs .tab-content.locations {
+                background: #DA701C url(http://www.slq.qld.gov.au/__data/assets/image/0009/219366/mobile-quick-tabs-bg-sprite.jpg) 0px -240px repeat-x;
+            }  
+            body.mobile #mobile-tabs .tab-content.contact_us {
+                background: #95AD01 url(http://www.slq.qld.gov.au/__data/assets/image/0009/219366/mobile-quick-tabs-bg-sprite.jpg) 0px -480px repeat-x;
+            }  
+            body.mobile #mobile-tabs .tab-content.search {
+                background: #736BA6 url(http://www.slq.qld.gov.au/__data/assets/image/0009/219366/mobile-quick-tabs-bg-sprite.jpg) 0px -720px repeat-x;
+            }  
+            body.mobile #mobile-tabs .tab-content.whats_on {
+                background: #D51548 url(http://www.slq.qld.gov.au/__data/assets/image/0009/219366/mobile-quick-tabs-bg-sprite.jpg) 0px -960px repeat-x;
+            }       
+
+
+
+ /*         --------------------
+            4.0 New header search
+            --------------------
+            */ 
+
+    body #container #header {
+      overflow: visible;
+    }
+
+    .slq-logo-text img {
+      margin: 5px 0;
+    }
+
+    #container-wrapper {
+       max-width: 970px;
+    }
+
+    #container-wrapper .slq-logo.desktop img {
+       width: 45px;
+       height: 41px;
+    }
+
+    #container-wrapper .slq-logo.site-icon, body.tablet #container-wrapper .slq-logo.site-icon {
+       top: 8px;
+    }
+
+    #container #header #header-pan-search .submit-button input {
+      border-radius: 0;
+      -webkit-appearance: none;
+    }
+
+
+    #header #header-pan-search div.input {
+      background: #fff;
+      border: 1px solid #959899;
+      border-bottom: none;
+    }
+    body.desktop #header #header-pan-search div.input {
+      width: 444px;
+    }
+    body.tablet #header #header-pan-search div.input {
+      width: 344px;
+    }
+
+
+    body #header #header-pan-search .submit-button {
+      background: none;
+    }
+
+    #header #header-pan-search .filter-controls {
+      background: #8078b8;
+      float: left;
+      padding: 0;
+      width: 125px;
+    }
+    #header #header-pan-search .filter-controls li {
+      float: none;
+      width: 100%;
+      border-top: solid 1px #6f68a0;
+    }
+    #header #header-pan-search .filter-controls a {
+      color: #fff;
+      display: block;
+      height: 40px;
+      width: auto;
+      font-weight: bold;
+      line-height: 40px;
+      padding: 0 0 0 15px;
+    }
+    #header #header-pan-search .filter-controls .closed > li > a {
+      background: url(http://www.slq.qld.gov.au/__data/assets/image/0005/346073/sq-search-arrow-down.jpg?v=0.1.1) no-repeat right 16px;
+      margin: 0 10px 0 0;
+      padding: 0 0 0 15px;
+    }
+    #header #header-pan-search .filter-controls .open > li > a {
+      background: url(http://www.slq.qld.gov.au/__data/assets/image/0006/346074/sq-search-arrow-up.jpg?v=0.1.1) no-repeat right 16px;
+      margin: 0 10px 0 0;
+      padding: 0 0 0 15px;
+    }
+    #header #header-pan-search .filter-controls .searchable-options {
+      display: none;
+      background: #685eac;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: absolute;
+      z-index: 9999;
+      width: 125px;
+    }
+    #header #header-pan-search .filter-controls .open .searchable-options {
+      display: block;
+    }
+
+    body #container #header #header-pan-search .submit-button,
+    body.tablet #header #header-pan-search .submit-button input {
+      width: 39px;
+    }
+
+
+
+    #header #header-pan-search {
+      background: url(http://www.slq.qld.gov.au/__data/assets/image/0016/346030/very-light-grey-grid-texture.png?v=0.1.1) 0px 0px;
+    }
+
+    #header #header-pan-search #query {
+      width: 97%;
+      color: #444444;
+    }
+
+
+    body.tablet #header #header-pan-search .filter-controls {
+      padding: 0;
+    }
+
+    body.mobile #site-top .slq-logo-text.desktop {
+      display: none;
+    }
+
+
+    body.tablet #header #header-pan-search .filter-controls #events-search-option, 
+    body.tablet #header #header-pan-search .filter-controls #blogs-search-option {
+      display: block;
+    }
+
+    #site-top #site-strip {
+      background: #eb1c51 url(http://www.slq.qld.gov.au/__data/assets/image/0003/346044/header-strip-desktop.png?v=0.1.1) 0px 0px;
+      height: 3px;
+      margin: 0px 0px 3px 0px;
+    }
+
+    div#site-top {
+      background: url("http://www.slq.qld.gov.au/__data/assets/image/0018/346023/bg-grid.png?v=0.1.1") 0px 1px;
+      /* height: 51px; - Removed, causing site notice spacing issues - TNT */
+    }
+                                                      

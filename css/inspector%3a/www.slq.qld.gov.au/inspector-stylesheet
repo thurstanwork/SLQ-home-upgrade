@@ -1,0 +1,105 @@
+body.home.has-js.desktop {
+    font-family: "Open Sans", sans-serif;
+}
+
+
+div#container-wrapper {
+    max-width: unset;
+}
+
+body.desktop #site-top {
+    background:  none;
+    min-height:  unset;
+}
+
+a.slq-logo-text.desktop {
+    display:  none;
+}
+
+#site-top #site-strip {
+    margin: 0;
+}
+
+#header #header-pan-search {
+    background:  none;
+}
+
+#site-top, #header, #footer, #breadcrumb, .float-wrapper {
+    max-width: unset;
+    /* width: 90%; */
+}
+
+#container-wrapper .slq-logo {
+    position:  unset;
+    display:  none;
+}
+
+#container {
+    /* max-width: 1360px; */
+    width: unset;
+    float: unset;
+    /* margin: 0 5%; */
+}
+
+#footer.float-wrapper {
+    background: #2e2e2e;
+    float:  unset;
+}
+
+#footer.float-wrapper .column-left {
+    background:  no-repeat;
+}
+
+.float-wrapper .column-right {
+    width:  unset;
+}
+
+#tools-slider-container {
+    width: unset;
+}
+
+.home #content {
+    width: 90%;
+}
+
+#footer .feature.aqua.cc-logo {
+    background:  #00b1b0;
+}
+
+#tab-background {
+    width: 100%;
+    position:  unset;
+    top:  unset;
+    left:  unset;
+}
+
+#navigation.float-wrapper {
+    max-width:  unset;
+}
+
+.menu-item a {
+    background: none;
+}
+
+.menu-item {
+    background: #2e2e2e;
+}
+
+#footer h3 a {
+    text-shadow:  none;
+    color:  white;
+    text-decoration:  none;
+    font-weight: 300;
+}
+
+body {
+    font-size: 18px;
+}
+
+#fat-footer {
+    display:  none;
+}
+
+#footer .column-right .feature {
+    text-shadow:  none;
+}
